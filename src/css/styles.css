@@ -1,9 +1,9 @@
 /* ============================================================
    IIGS — Custom Styles
-   Built with Tailwind CSS CDN + custom overrides
+   Color palette derived from the official IIGS logo:
+   Warm golds, tans, deep browns, cream whites
    ============================================================ */
 
-/* ---------- Base ---------- */
 * {
   -webkit-tap-highlight-color: transparent;
 }
@@ -12,13 +12,8 @@ html {
   scroll-padding-top: 5rem;
 }
 
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 ::selection {
-  background-color: #FF6600;
+  background-color: #B8860B;
   color: white;
 }
 
@@ -29,10 +24,10 @@ body {
 }
 
 #navbar.scrolled {
-  background: rgba(0, 26, 77, 0.95);
+  background: rgba(44, 30, 15, 0.97);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
 }
 
 .nav-link {
@@ -79,14 +74,14 @@ body {
   display: block;
   padding: 0.625rem 1rem;
   font-size: 0.875rem;
-  color: #475569;
+  color: #5C4A32;
   border-radius: 0.5rem;
   transition: all 0.15s;
 }
 
 .dropdown-item:hover {
-  background: #FFF7ED;
-  color: #EA580C;
+  background: #FAF5EB;
+  color: #8B6914;
 }
 
 /* ---------- Mobile Nav ---------- */
@@ -110,23 +105,23 @@ body {
 .form-input {
   width: 100%;
   padding: 0.75rem 1rem;
-  background: #f8fafc;
-  border: 1.5px solid #e2e8f0;
+  background: #FDFBF7;
+  border: 1.5px solid #E8DCC8;
   border-radius: 0.75rem;
   font-size: 0.9375rem;
-  color: #1e293b;
+  color: #3D2E1C;
   transition: all 0.2s;
   outline: none;
 }
 
 .form-input:focus {
-  border-color: #FF6600;
-  box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.15);
+  border-color: #B8860B;
+  box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.15);
   background: #fff;
 }
 
 .form-input::placeholder {
-  color: #94a3b8;
+  color: #B5A48A;
 }
 
 /* ---------- Donate Tiers ---------- */
@@ -142,8 +137,8 @@ body {
 
 .donate-tier:hover,
 .donate-tier.active {
-  background: rgba(255, 102, 0, 0.2);
-  border-color: #FF6600;
+  background: rgba(184, 134, 11, 0.25);
+  border-color: #D4A017;
   transform: translateY(-2px);
 }
 
@@ -153,19 +148,19 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #FAF5EB;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #D4C4A8;
   border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #B5A48A;
 }
 
-/* ---------- Smooth Animations ---------- */
+/* ---------- Reduced Motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -175,51 +170,44 @@ body {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-
   [data-aos] {
     opacity: 1 !important;
     transform: none !important;
   }
 }
 
-/* ---------- Counter Animation Helper ---------- */
-.counter-animated {
-  display: inline-block;
+/* ---------- Timeline ---------- */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #D4A017, #E8DCC8, #D4A017);
+  transform: translateX(-50%);
 }
 
-/* ---------- Hero Gradient Overlay ---------- */
-.hero-gradient {
-  background: linear-gradient(
-    135deg,
-    rgba(0, 10, 26, 0.95) 0%,
-    rgba(0, 26, 77, 0.85) 40%,
-    rgba(0, 51, 153, 0.75) 100%
-  );
-}
-
-/* ---------- Glass Effect ---------- */
-.glass {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-/* ---------- Fluid Typography ---------- */
-@media screen and (min-width: 320px) {
-  .fluid-heading {
-    font-size: clamp(2rem, 5vw + 1rem, 4.5rem);
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 1.25rem;
   }
 }
 
-/* ---------- Loading shimmer ---------- */
+/* ---------- Logo Glow ---------- */
+.logo-glow {
+  filter: drop-shadow(0 0 20px rgba(212, 160, 23, 0.3));
+}
+
+/* ---------- Shimmer ---------- */
 @keyframes shimmer {
   0% { background-position: -200px 0; }
   100% { background-position: calc(200px + 100%) 0; }
 }
 
-.shimmer {
-  background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 37%, #f1f5f9 63%);
-  background-size: 200px 100%;
-  animation: shimmer 1.5s infinite;
+/* ---------- Gradient text ---------- */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #D4A017, #C6952A, #E8C547, #D4A017);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
