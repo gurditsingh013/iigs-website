@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNewsletterForm();
   initKirtanPlayer();
   initLucideIcons();
+  if (typeof initStories === 'function') initStories();
 });
 
 /* ---------- Lucide Icons ---------- */
@@ -181,18 +182,18 @@ function initContactForm() {
       });
       const result = await res.json();
       btn.innerHTML = '<svg class="w-5 h-5 inline mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg> Message Sent!';
-      btn.classList.replace('bg-khanda-400', 'bg-green-500');
+      btn.classList.replace('bg-royal-600', 'bg-green-500');
       form.reset();
     } catch {
       btn.innerHTML = '<svg class="w-5 h-5 inline mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg> Message Sent!';
-      btn.classList.replace('bg-khanda-400', 'bg-green-500');
+      btn.classList.replace('bg-royal-600', 'bg-green-500');
       form.reset();
     }
 
     setTimeout(() => {
       btn.disabled = false;
       btn.innerHTML = originalHTML;
-      btn.classList.replace('bg-green-500', 'bg-khanda-400');
+      btn.classList.replace('bg-green-500', 'bg-royal-600');
     }, 3000);
   });
 }
@@ -259,11 +260,11 @@ function playKirtan(videoId, title, raagi, btn) {
   // Update button states
   document.querySelectorAll('.kirtan-play-btn').forEach(b => {
     b.innerHTML = '<i data-lucide="play" class="w-5 h-5"></i>';
-    b.closest('.kirtan-track')?.classList.remove('bg-khanda-50', 'border-khanda-200');
+    b.closest('.kirtan-track')?.classList.remove('bg-royal-50', 'border-royal-200');
   });
 
   btn.innerHTML = '<i data-lucide="pause" class="w-5 h-5"></i>';
-  btn.closest('.kirtan-track')?.classList.add('bg-khanda-50', 'border-khanda-200');
+  btn.closest('.kirtan-track')?.classList.add('bg-royal-50', 'border-royal-200');
   currentlyPlaying = videoId;
 
   lucide.createIcons();

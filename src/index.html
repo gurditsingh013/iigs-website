@@ -24,9 +24,8 @@
       theme: {
         extend: {
           colors: {
-            wheat: { 50: '#FEFCF6', 100: '#FDF8EA', 200: '#FAF0D4', 300: '#F5E3B0', 400: '#EDD088', 500: '#D4A017', 600: '#B8860B', 700: '#8B6914', 800: '#5C4A1E', 900: '#3D2E1C' },
-            bark: { 50: '#FAF5EB', 100: '#F0E6D0', 200: '#E8DCC8', 300: '#D4C4A8', 400: '#B5A48A', 500: '#8C7A5E', 600: '#6B5B42', 700: '#5C4A32', 800: '#3D2E1C', 900: '#2C1E0F' },
-            khanda: { 50: '#FBF7EE', 100: '#F5ECDA', 200: '#EDDCB8', 300: '#E0C78A', 400: '#D4A017', 500: '#B8860B', 600: '#96700A', 700: '#745808', 800: '#523E06', 900: '#3B2D05' },
+            royal: { 50: '#EFF6FF', 100: '#DBEAFE', 200: '#BFDBFE', 300: '#93C5FD', 400: '#60A5FA', 500: '#3B82F6', 600: '#2563EB', 700: '#1D4ED8', 800: '#1E3A5F', 900: '#0F172A' },
+            gold: { 50: '#FFFBEB', 100: '#FEF3C7', 200: '#FDE68A', 300: '#FCD34D', 400: '#FBBF24', 500: '#D4A017', 600: '#B8860B', 700: '#92400E', 800: '#78350F', 900: '#451A03' },
           },
           fontFamily: {
             heading: ['"Playfair Display"', 'Georgia', 'serif'],
@@ -50,7 +49,7 @@
   <link rel="icon" href="https://dvncorestorageprod.blob.core.windows.net/files/ProjectApplication/100289/UserImage/IIGS_logo%20%281%29.png" type="image/png">
 </head>
 
-<body class="font-body bg-wheat-50 text-bark-800 antialiased">
+<body class="font-body bg-slate-50 text-slate-800 antialiased">
 
   <!-- ============================================================
        NAVBAR
@@ -78,6 +77,7 @@
               Programs <i data-lucide="chevron-down" class="w-4 h-4 opacity-60"></i>
             </button>
             <div class="dropdown-menu">
+              <a href="#stories" class="dropdown-item">Stories</a>
               <a href="#portraits" class="dropdown-item">The Sikh Portrait</a>
               <a href="#kirtan" class="dropdown-item">Kirtan Library</a>
               <a href="#learning" class="dropdown-item">Learning Zone</a>
@@ -89,7 +89,7 @@
           <a href="#donate" class="nav-link">Donate</a>
           <a href="#contact" class="nav-link">Contact</a>
           <a href="https://www.iigs.com/registration-form" target="_blank"
-             class="ml-2 px-5 py-2 bg-khanda-400 hover:bg-khanda-500 text-white font-semibold rounded-full text-sm transition-all hover:shadow-lg hover:shadow-khanda-400/25">
+             class="ml-2 px-5 py-2 bg-gold-400 hover:bg-gold-500 text-royal-900 font-semibold rounded-full text-sm transition-all hover:shadow-lg hover:shadow-gold-400/25">
             Register
           </a>
         </div>
@@ -105,7 +105,7 @@
   <!-- Mobile Nav Overlay -->
   <div id="mobile-nav" class="fixed inset-0 z-[60] hidden">
     <div id="mobile-backdrop" class="absolute inset-0 bg-black/60 transition-opacity duration-300" style="opacity:0"></div>
-    <div id="mobile-panel" class="absolute right-0 top-0 bottom-0 w-80 max-w-full bg-bark-900 p-6 overflow-y-auto transition-transform duration-300" style="transform:translateX(100%)">
+    <div id="mobile-panel" class="absolute right-0 top-0 bottom-0 w-80 max-w-full bg-royal-900 p-6 overflow-y-auto transition-transform duration-300" style="transform:translateX(100%)">
       <div class="flex items-center justify-between mb-8">
         <img src="https://dvncorestorageprod.blob.core.windows.net/files/ProjectApplication/100289/UserImage/IIGS_logo%20%281%29.png"
              alt="IIGS" class="h-10 logo-glow">
@@ -118,6 +118,7 @@
         <a href="#camps" class="mobile-nav-link">Camps</a>
         <a href="#gallery" class="mobile-nav-link">Gallery</a>
         <a href="#dek" class="mobile-nav-link">Darbar-E-Khalsa</a>
+        <a href="#stories" class="mobile-nav-link">Stories</a>
         <a href="#portraits" class="mobile-nav-link">The Sikh Portrait</a>
         <a href="#kirtan" class="mobile-nav-link">Kirtan Library</a>
         <a href="#learning" class="mobile-nav-link">Learning Zone</a>
@@ -127,7 +128,7 @@
         <a href="#contact" class="mobile-nav-link">Contact</a>
       </div>
       <a href="https://www.iigs.com/registration-form" target="_blank"
-         class="mt-6 block text-center px-5 py-3 bg-khanda-400 hover:bg-khanda-500 text-white font-semibold rounded-full transition-all">
+         class="mt-6 block text-center px-5 py-3 bg-gold-400 hover:bg-gold-500 text-royal-900 font-semibold rounded-full transition-all">
         Register Now
       </a>
     </div>
@@ -136,13 +137,12 @@
   <!-- ============================================================
        HERO
        ============================================================ -->
-  <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-bark-900">
-    <!-- Background gradient -->
-    <div class="absolute inset-0 bg-gradient-to-br from-bark-900 via-bark-800 to-khanda-900"></div>
-    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 30% 40%, rgba(212,160,23,0.3) 0%, transparent 60%), radial-gradient(circle at 70% 60%, rgba(184,134,11,0.2) 0%, transparent 50%);"></div>
+  <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-royal-900">
+    <div class="absolute inset-0 bg-gradient-to-br from-royal-900 via-royal-800 to-slate-900"></div>
+    <div class="hero-particles"></div>
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle at 30% 40%, rgba(251,191,36,0.4) 0%, transparent 50%), radial-gradient(circle at 70% 60%, rgba(59,130,246,0.3) 0%, transparent 50%);"></div>
 
     <div class="relative z-10 max-w-5xl mx-auto px-4 text-center py-32">
-      <!-- Logo -->
       <div data-aos="zoom-in" data-aos-duration="1000">
         <img src="https://dvncorestorageprod.blob.core.windows.net/files/ProjectApplication/100289/UserImage/IIGS_logo%20%281%29.png"
              alt="IIGS — Institute of International Gurmat Studies"
@@ -154,28 +154,27 @@
         <span class="text-gradient-gold">Gurmat Studies</span>
       </h1>
 
-      <p data-aos="fade-up" data-aos-delay="400" class="font-heading text-xl sm:text-2xl text-khanda-300 italic mb-2">
+      <p data-aos="fade-up" data-aos-delay="400" class="font-heading text-xl sm:text-2xl text-gold-300 italic mb-2">
         Deg Teg Fateh
       </p>
 
-      <p data-aos="fade-up" data-aos-delay="500" class="text-lg text-wheat-300/80 max-w-2xl mx-auto mb-10">
+      <p data-aos="fade-up" data-aos-delay="500" class="text-lg text-slate-300/80 max-w-2xl mx-auto mb-10">
         Inspiring Sikh youth worldwide through Gurmat education, kirtan, camps, and community service for over 70 years.
       </p>
 
       <div data-aos="fade-up" data-aos-delay="600" class="flex flex-col sm:flex-row items-center justify-center gap-4">
         <a href="#camps"
-           class="px-8 py-3.5 bg-khanda-400 hover:bg-khanda-500 text-white font-semibold rounded-full text-lg transition-all hover:shadow-xl hover:shadow-khanda-400/30 hover:-translate-y-0.5">
+           class="px-8 py-3.5 bg-gold-400 hover:bg-gold-500 text-royal-900 font-semibold rounded-full text-lg transition-all hover:shadow-xl hover:shadow-gold-400/30 hover:-translate-y-0.5">
           94th Camp 2026
         </a>
         <a href="#dek"
-           class="px-8 py-3.5 border-2 border-white/30 hover:border-white/60 text-white font-semibold rounded-full text-lg transition-all hover:-translate-y-0.5">
+           class="px-8 py-3.5 border-2 border-white/25 hover:border-white/50 text-white font-semibold rounded-full text-lg transition-all hover:-translate-y-0.5">
           Darbar-E-Khalsa 2026
         </a>
       </div>
 
-      <!-- Scroll indicator -->
       <div data-aos="fade-up" data-aos-delay="900" class="mt-16 animate-bounce">
-        <i data-lucide="chevron-down" class="w-8 h-8 text-white/40 mx-auto"></i>
+        <i data-lucide="chevron-down" class="w-8 h-8 text-white/30 mx-auto"></i>
       </div>
     </div>
   </section>
@@ -183,40 +182,38 @@
   <!-- ============================================================
        ABOUT / FOUNDER
        ============================================================ -->
-  <section id="about" class="py-20 lg:py-28 bg-wheat-50">
+  <section id="about" class="py-20 lg:py-28 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Section Header -->
       <div class="text-center mb-16" data-aos="fade-up">
-        <p class="text-khanda-500 font-semibold tracking-wider uppercase text-sm mb-2">Our Legacy</p>
-        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-bark-900">About IIGS</h2>
-        <div class="mt-4 w-20 h-1 bg-gradient-to-r from-khanda-400 to-khanda-600 mx-auto rounded-full"></div>
+        <p class="text-royal-600 font-semibold tracking-wider uppercase text-sm mb-2">Our Legacy</p>
+        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-royal-900">About IIGS</h2>
+        <div class="mt-4 w-20 h-1 bg-gradient-to-r from-gold-400 to-gold-600 mx-auto rounded-full"></div>
       </div>
 
-      <!-- Founder Row -->
       <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
         <div data-aos="fade-right">
           <div class="relative">
             <img src="https://dvncorestorageprod.blob.core.windows.net/files/OrganizationApplication/10102/Story/IIGS%20Founder_20231030173359961.jpg"
                  alt="Capt. Kanwar Harbhajan Singh — Papa Ji, IIGS Founder"
                  class="rounded-2xl shadow-xl w-full object-cover max-h-[500px]">
-            <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-khanda-400/20 rounded-2xl -z-10"></div>
+            <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-royal-500/10 rounded-2xl -z-10"></div>
           </div>
         </div>
         <div data-aos="fade-left">
-          <h3 class="font-heading text-2xl lg:text-3xl font-bold text-bark-900 mb-4">
+          <h3 class="font-heading text-2xl lg:text-3xl font-bold text-royal-900 mb-4">
             Capt. Kanwar Harbhajan Singh
           </h3>
-          <p class="text-khanda-600 font-semibold text-lg mb-4 italic">"Papa Ji" &mdash; Founder</p>
-          <p class="text-bark-600 leading-relaxed mb-4">
+          <p class="text-gold-600 font-semibold text-lg mb-4 italic">"Papa Ji" &mdash; Founder</p>
+          <p class="text-slate-600 leading-relaxed mb-4">
             Born September 21, 1936, Papa Ji founded the Young Sikh Missionaries in Lucknow at just 19 years old. In 1972, the organization was renamed to the Institute of Gurmat Studies and pioneered co-educational Sikh youth camping.
           </p>
-          <p class="text-bark-600 leading-relaxed mb-4">
+          <p class="text-slate-600 leading-relaxed mb-4">
             By 1979, the 12th camp was held in Kathmandu, Nepal, taking the movement international. After moving to Southern California in 1985, Papa Ji launched the first Darbar-E-Khalsa on December 25, 1986 &mdash; drawing over 700 attendees in its inaugural year.
           </p>
-          <p class="text-bark-600 leading-relaxed mb-4">
+          <p class="text-slate-600 leading-relaxed mb-4">
             Over the decades, IIGS has organized 120+ camps across 4 continents and Darbar-E-Khalsa has grown to welcome more than 15,000 sangat annually.
           </p>
-          <p class="text-bark-500 text-sm italic">
+          <p class="text-slate-400 text-sm italic">
             Papa Ji passed away on January 30, 2011 in Mexico City. His legacy continues to inspire Sikh youth around the world.
           </p>
         </div>
@@ -232,26 +229,26 @@
 
       <!-- Mission / Vision Cards -->
       <div class="grid md:grid-cols-3 gap-8">
-        <div data-aos="fade-up" data-aos-delay="0" class="bg-white rounded-2xl p-8 shadow-lg shadow-bark-200/40 border border-bark-100 hover:shadow-xl transition-shadow">
-          <div class="w-14 h-14 bg-khanda-50 rounded-xl flex items-center justify-center mb-5">
-            <i data-lucide="target" class="w-7 h-7 text-khanda-500"></i>
+        <div data-aos="fade-up" data-aos-delay="0" class="bg-slate-50 rounded-2xl p-8 shadow-lg shadow-slate-200/40 border border-slate-100 hover:shadow-xl transition-shadow">
+          <div class="w-14 h-14 bg-royal-50 rounded-xl flex items-center justify-center mb-5">
+            <i data-lucide="target" class="w-7 h-7 text-royal-600"></i>
           </div>
-          <h4 class="font-heading text-xl font-bold text-bark-900 mb-3">Our Mission</h4>
-          <p class="text-bark-600 leading-relaxed">To educate and inspire Sikh youth worldwide through Gurmat teachings, fostering a strong sense of Sikh identity, spiritual growth, and community leadership.</p>
+          <h4 class="font-heading text-xl font-bold text-royal-900 mb-3">Our Mission</h4>
+          <p class="text-slate-600 leading-relaxed">To educate and inspire Sikh youth worldwide through Gurmat teachings, fostering a strong sense of Sikh identity, spiritual growth, and community leadership.</p>
         </div>
-        <div data-aos="fade-up" data-aos-delay="100" class="bg-white rounded-2xl p-8 shadow-lg shadow-bark-200/40 border border-bark-100 hover:shadow-xl transition-shadow">
-          <div class="w-14 h-14 bg-khanda-50 rounded-xl flex items-center justify-center mb-5">
-            <i data-lucide="eye" class="w-7 h-7 text-khanda-500"></i>
+        <div data-aos="fade-up" data-aos-delay="100" class="bg-slate-50 rounded-2xl p-8 shadow-lg shadow-slate-200/40 border border-slate-100 hover:shadow-xl transition-shadow">
+          <div class="w-14 h-14 bg-royal-50 rounded-xl flex items-center justify-center mb-5">
+            <i data-lucide="eye" class="w-7 h-7 text-royal-600"></i>
           </div>
-          <h4 class="font-heading text-xl font-bold text-bark-900 mb-3">Our Vision</h4>
-          <p class="text-bark-600 leading-relaxed">A global Sikh community where every young Sikh is connected to their heritage, empowered by Guru's wisdom, and committed to selfless service (sewa).</p>
+          <h4 class="font-heading text-xl font-bold text-royal-900 mb-3">Our Vision</h4>
+          <p class="text-slate-600 leading-relaxed">A global Sikh community where every young Sikh is connected to their heritage, empowered by Guru's wisdom, and committed to selfless service (sewa).</p>
         </div>
-        <div data-aos="fade-up" data-aos-delay="200" class="bg-white rounded-2xl p-8 shadow-lg shadow-bark-200/40 border border-bark-100 hover:shadow-xl transition-shadow">
-          <div class="w-14 h-14 bg-khanda-50 rounded-xl flex items-center justify-center mb-5">
-            <i data-lucide="heart-handshake" class="w-7 h-7 text-khanda-500"></i>
+        <div data-aos="fade-up" data-aos-delay="200" class="bg-slate-50 rounded-2xl p-8 shadow-lg shadow-slate-200/40 border border-slate-100 hover:shadow-xl transition-shadow">
+          <div class="w-14 h-14 bg-royal-50 rounded-xl flex items-center justify-center mb-5">
+            <i data-lucide="heart-handshake" class="w-7 h-7 text-royal-600"></i>
           </div>
-          <h4 class="font-heading text-xl font-bold text-bark-900 mb-3">Our Values</h4>
-          <p class="text-bark-600 leading-relaxed">Rooted in Gurbani &mdash; Naam Simran, Sewa, Equality, Courage, and Chardi Kala. We believe in learning by living, building community through shared experience.</p>
+          <h4 class="font-heading text-xl font-bold text-royal-900 mb-3">Our Values</h4>
+          <p class="text-slate-600 leading-relaxed">Rooted in Gurbani &mdash; Naam Simran, Sewa, Equality, Courage, and Chardi Kala. We believe in learning by living, building community through shared experience.</p>
         </div>
       </div>
     </div>
@@ -260,24 +257,24 @@
   <!-- ============================================================
        IMPACT STATS
        ============================================================ -->
-  <section class="py-16 bg-gradient-to-r from-bark-800 via-bark-900 to-bark-800">
+  <section class="py-16 bg-gradient-to-r from-royal-800 via-royal-900 to-royal-800">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
         <div data-aos="zoom-in" data-aos-delay="0">
-          <p class="font-heading text-4xl lg:text-5xl font-bold text-khanda-400" data-counter="70">0+</p>
-          <p class="text-wheat-300 mt-2 text-sm lg:text-base">Years of Service</p>
+          <p class="font-heading text-4xl lg:text-5xl font-bold text-gold-400" data-counter="70">0+</p>
+          <p class="text-slate-300 mt-2 text-sm lg:text-base">Years of Service</p>
         </div>
         <div data-aos="zoom-in" data-aos-delay="100">
-          <p class="font-heading text-4xl lg:text-5xl font-bold text-khanda-400" data-counter="120">0+</p>
-          <p class="text-wheat-300 mt-2 text-sm lg:text-base">Camps Worldwide</p>
+          <p class="font-heading text-4xl lg:text-5xl font-bold text-gold-400" data-counter="120">0+</p>
+          <p class="text-slate-300 mt-2 text-sm lg:text-base">Camps Worldwide</p>
         </div>
         <div data-aos="zoom-in" data-aos-delay="200">
-          <p class="font-heading text-4xl lg:text-5xl font-bold text-khanda-400" data-counter="15000">0+</p>
-          <p class="text-wheat-300 mt-2 text-sm lg:text-base">DEK Sangat Annually</p>
+          <p class="font-heading text-4xl lg:text-5xl font-bold text-gold-400" data-counter="15000">0+</p>
+          <p class="text-slate-300 mt-2 text-sm lg:text-base">DEK Sangat Annually</p>
         </div>
         <div data-aos="zoom-in" data-aos-delay="300">
-          <p class="font-heading text-4xl lg:text-5xl font-bold text-khanda-400" data-counter="60000">$0+</p>
-          <p class="text-wheat-300 mt-2 text-sm lg:text-base">Scholarships Awarded</p>
+          <p class="font-heading text-4xl lg:text-5xl font-bold text-gold-400" data-counter="60000">$0+</p>
+          <p class="text-slate-300 mt-2 text-sm lg:text-base">Scholarships Awarded</p>
         </div>
       </div>
     </div>
@@ -286,17 +283,15 @@
   <!-- ============================================================
        CAMPS — 94th Camp 2026
        ============================================================ -->
-  <section id="camps" class="py-20 lg:py-28 bg-white">
+  <section id="camps" class="py-20 lg:py-28 bg-slate-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Section Header -->
       <div class="text-center mb-16" data-aos="fade-up">
-        <p class="text-khanda-500 font-semibold tracking-wider uppercase text-sm mb-2">Youth Camps</p>
-        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-bark-900">94th Camp &mdash; 2026</h2>
-        <div class="mt-4 w-20 h-1 bg-gradient-to-r from-khanda-400 to-khanda-600 mx-auto rounded-full"></div>
+        <p class="text-royal-600 font-semibold tracking-wider uppercase text-sm mb-2">Youth Camps</p>
+        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-royal-900">94th Camp &mdash; 2026</h2>
+        <div class="mt-4 w-20 h-1 bg-gradient-to-r from-gold-400 to-gold-600 mx-auto rounded-full"></div>
       </div>
 
       <div class="grid lg:grid-cols-2 gap-12 items-start">
-        <!-- Camp Image & Flyer -->
         <div data-aos="fade-right" class="space-y-6">
           <img src="https://dvncorestorageprod.blob.core.windows.net/files/OrganizationApplication/10102/Updates/IIGS_93rd%20Camp%20Group%20Pic_20250902002313698.jpg"
                alt="IIGS 93rd Camp Group Photo"
@@ -308,92 +303,71 @@
                onclick="openLightbox(this.src)">
         </div>
 
-        <!-- Camp Details -->
         <div data-aos="fade-left">
-          <div class="bg-wheat-50 rounded-2xl p-8 border border-wheat-200 mb-8">
-            <h3 class="font-heading text-2xl font-bold text-bark-900 mb-6">Camp Details</h3>
+          <div class="bg-white rounded-2xl p-8 border border-slate-200 mb-8 shadow-sm">
+            <h3 class="font-heading text-2xl font-bold text-royal-900 mb-6">Camp Details</h3>
             <div class="space-y-4">
               <div class="flex gap-4">
-                <div class="w-10 h-10 bg-khanda-50 rounded-lg flex items-center justify-center shrink-0">
-                  <i data-lucide="map-pin" class="w-5 h-5 text-khanda-500"></i>
+                <div class="w-10 h-10 bg-royal-50 rounded-lg flex items-center justify-center shrink-0">
+                  <i data-lucide="map-pin" class="w-5 h-5 text-royal-600"></i>
                 </div>
                 <div>
-                  <p class="font-semibold text-bark-800">Camp Seely</p>
-                  <p class="text-bark-500 text-sm">250 North Highway 138, City of Crestline, CA-92325</p>
-                  <p class="text-bark-400 text-xs mt-1">Near Lake Arrowhead, San Bernardino Mountains</p>
+                  <p class="font-semibold text-slate-800">Camp Seely</p>
+                  <p class="text-slate-500 text-sm">250 North Highway 138, City of Crestline, CA-92325</p>
+                  <p class="text-slate-400 text-xs mt-1">Near Lake Arrowhead, San Bernardino Mountains</p>
                 </div>
               </div>
               <div class="flex gap-4">
-                <div class="w-10 h-10 bg-khanda-50 rounded-lg flex items-center justify-center shrink-0">
-                  <i data-lucide="users" class="w-5 h-5 text-khanda-500"></i>
+                <div class="w-10 h-10 bg-royal-50 rounded-lg flex items-center justify-center shrink-0">
+                  <i data-lucide="users" class="w-5 h-5 text-royal-600"></i>
                 </div>
                 <div>
-                  <p class="font-semibold text-bark-800">200 Young Sikh Women &amp; Men</p>
-                  <p class="text-bark-500 text-sm">Ages 8&ndash;25</p>
+                  <p class="font-semibold text-slate-800">200 Young Sikh Women &amp; Men</p>
+                  <p class="text-slate-500 text-sm">Ages 8&ndash;25</p>
                 </div>
               </div>
               <div class="flex gap-4">
-                <div class="w-10 h-10 bg-khanda-50 rounded-lg flex items-center justify-center shrink-0">
-                  <i data-lucide="calendar" class="w-5 h-5 text-khanda-500"></i>
+                <div class="w-10 h-10 bg-royal-50 rounded-lg flex items-center justify-center shrink-0">
+                  <i data-lucide="calendar" class="w-5 h-5 text-royal-600"></i>
                 </div>
                 <div>
-                  <p class="font-semibold text-bark-800">Summer 2026</p>
-                  <p class="text-bark-500 text-sm">9-day residential camp experience</p>
+                  <p class="font-semibold text-slate-800">Summer 2026</p>
+                  <p class="text-slate-500 text-sm">9-day residential camp experience</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Activities -->
-          <h4 class="font-heading text-xl font-bold text-bark-900 mb-4">Camp Activities</h4>
+          <h4 class="font-heading text-xl font-bold text-royal-900 mb-4">Camp Activities</h4>
           <div class="grid grid-cols-2 gap-3 mb-8">
-            <div class="flex items-center gap-2 text-bark-700 text-sm">
-              <i data-lucide="music" class="w-4 h-4 text-khanda-500"></i> Naam Simran &amp; Kirtan
-            </div>
-            <div class="flex items-center gap-2 text-bark-700 text-sm">
-              <i data-lucide="book-open" class="w-4 h-4 text-khanda-500"></i> Path Classes
-            </div>
-            <div class="flex items-center gap-2 text-bark-700 text-sm">
-              <i data-lucide="mountain" class="w-4 h-4 text-khanda-500"></i> Trekking
-            </div>
-            <div class="flex items-center gap-2 text-bark-700 text-sm">
-              <i data-lucide="swords" class="w-4 h-4 text-khanda-500"></i> Gatka
-            </div>
-            <div class="flex items-center gap-2 text-bark-700 text-sm">
-              <i data-lucide="waves" class="w-4 h-4 text-khanda-500"></i> Swimming
-            </div>
-            <div class="flex items-center gap-2 text-bark-700 text-sm">
-              <i data-lucide="crown" class="w-4 h-4 text-khanda-500"></i> Turban Tying
-            </div>
-            <div class="flex items-center gap-2 text-bark-700 text-sm">
-              <i data-lucide="languages" class="w-4 h-4 text-khanda-500"></i> Gurmukhi
-            </div>
-            <div class="flex items-center gap-2 text-bark-700 text-sm">
-              <i data-lucide="sparkles" class="w-4 h-4 text-khanda-500"></i> Personality Development
-            </div>
-            <div class="flex items-center gap-2 text-bark-700 text-sm col-span-2">
-              <i data-lucide="flame" class="w-4 h-4 text-khanda-500"></i> Campfire Night
-            </div>
+            <div class="flex items-center gap-2 text-slate-700 text-sm"><i data-lucide="music" class="w-4 h-4 text-gold-500"></i> Naam Simran &amp; Kirtan</div>
+            <div class="flex items-center gap-2 text-slate-700 text-sm"><i data-lucide="book-open" class="w-4 h-4 text-gold-500"></i> Path Classes</div>
+            <div class="flex items-center gap-2 text-slate-700 text-sm"><i data-lucide="mountain" class="w-4 h-4 text-gold-500"></i> Trekking</div>
+            <div class="flex items-center gap-2 text-slate-700 text-sm"><i data-lucide="swords" class="w-4 h-4 text-gold-500"></i> Gatka</div>
+            <div class="flex items-center gap-2 text-slate-700 text-sm"><i data-lucide="waves" class="w-4 h-4 text-gold-500"></i> Swimming</div>
+            <div class="flex items-center gap-2 text-slate-700 text-sm"><i data-lucide="crown" class="w-4 h-4 text-gold-500"></i> Turban Tying</div>
+            <div class="flex items-center gap-2 text-slate-700 text-sm"><i data-lucide="languages" class="w-4 h-4 text-gold-500"></i> Gurmukhi</div>
+            <div class="flex items-center gap-2 text-slate-700 text-sm"><i data-lucide="sparkles" class="w-4 h-4 text-gold-500"></i> Personality Development</div>
+            <div class="flex items-center gap-2 text-slate-700 text-sm col-span-2"><i data-lucide="flame" class="w-4 h-4 text-gold-500"></i> Campfire Night</div>
           </div>
 
           <a href="https://www.iigs.com/registration-form" target="_blank"
-             class="inline-flex items-center gap-2 px-8 py-3.5 bg-khanda-400 hover:bg-khanda-500 text-white font-semibold rounded-full transition-all hover:shadow-lg hover:shadow-khanda-400/25">
+             class="inline-flex items-center gap-2 px-8 py-3.5 bg-gold-400 hover:bg-gold-500 text-royal-900 font-semibold rounded-full transition-all hover:shadow-lg hover:shadow-gold-400/25">
             <i data-lucide="pen-line" class="w-5 h-5"></i> Register for 94th Camp
           </a>
 
-          <!-- Testimonials -->
           <div class="mt-10 space-y-4">
-            <div class="bg-khanda-50 border border-khanda-100 rounded-xl p-5">
-              <p class="text-bark-700 text-sm italic leading-relaxed">"Before camp, I didn't do paath, I was unaware of the Guru's teachings, and I didn't feel comfortable being a Sikh. After camp I have noticed a huge change in my attitude and behaviour."</p>
-              <p class="text-khanda-600 text-xs font-semibold mt-2">&mdash; Camp Attendee</p>
+            <div class="bg-royal-50 border border-royal-100 rounded-xl p-5">
+              <p class="text-slate-700 text-sm italic leading-relaxed">"Before camp, I didn't do paath, I was unaware of the Guru's teachings. After camp I have noticed a huge change in my attitude and behaviour."</p>
+              <p class="text-royal-600 text-xs font-semibold mt-2">&mdash; Camp Attendee</p>
             </div>
-            <div class="bg-khanda-50 border border-khanda-100 rounded-xl p-5">
-              <p class="text-bark-700 text-sm italic leading-relaxed">"IIGS Camp was my nine-day treasure. It changed my life and connected me with my roots in ways I never imagined possible."</p>
-              <p class="text-khanda-600 text-xs font-semibold mt-2">&mdash; Avleen Kaur</p>
+            <div class="bg-royal-50 border border-royal-100 rounded-xl p-5">
+              <p class="text-slate-700 text-sm italic leading-relaxed">"IIGS Camp was my nine-day treasure. It changed my life and connected me with my roots in ways I never imagined possible."</p>
+              <p class="text-royal-600 text-xs font-semibold mt-2">&mdash; Avleen Kaur</p>
             </div>
-            <div class="bg-khanda-50 border border-khanda-100 rounded-xl p-5">
-              <p class="text-bark-700 text-sm italic leading-relaxed">"Being around other kids like him at camp makes him feel like nobody can stop him."</p>
-              <p class="text-khanda-600 text-xs font-semibold mt-2">&mdash; Parent</p>
+            <div class="bg-royal-50 border border-royal-100 rounded-xl p-5">
+              <p class="text-slate-700 text-sm italic leading-relaxed">"Being around other kids like him at camp makes him feel like nobody can stop him."</p>
+              <p class="text-royal-600 text-xs font-semibold mt-2">&mdash; Parent</p>
             </div>
           </div>
         </div>
@@ -404,51 +378,24 @@
   <!-- ============================================================
        PHOTO GALLERY
        ============================================================ -->
-  <section id="gallery" class="py-20 lg:py-28 bg-bark-50">
+  <section id="gallery" class="py-20 lg:py-28 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16" data-aos="fade-up">
-        <p class="text-khanda-500 font-semibold tracking-wider uppercase text-sm mb-2">Memories</p>
-        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-bark-900">Photo Gallery</h2>
-        <div class="mt-4 w-20 h-1 bg-gradient-to-r from-khanda-400 to-khanda-600 mx-auto rounded-full"></div>
+        <p class="text-royal-600 font-semibold tracking-wider uppercase text-sm mb-2">Memories</p>
+        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-royal-900">Photo Gallery</h2>
+        <div class="mt-4 w-20 h-1 bg-gradient-to-r from-gold-400 to-gold-600 mx-auto rounded-full"></div>
       </div>
 
       <div class="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4" data-aos="fade-up">
-        <div class="break-inside-avoid">
-          <img src="https://dvncorestorageprod.blob.core.windows.net/files/OrganizationApplication/10102/Updates/IIGS_93rd%20Camp%20Group%20Pic_20250902002313698.jpg"
-               alt="93rd Camp Group Photo" class="w-full rounded-xl shadow-md hover:shadow-xl transition-all cursor-pointer hover:scale-[1.02]" onclick="openLightbox(this.src)">
-        </div>
-        <div class="break-inside-avoid">
-          <img src="https://dvncorestorageprod.blob.core.windows.net/files/OrganizationApplication/10102/Story/IIGS%20Camp_20231030173447903.jpg"
-               alt="IIGS Camp" class="w-full rounded-xl shadow-md hover:shadow-xl transition-all cursor-pointer hover:scale-[1.02]" onclick="openLightbox(this.src)">
-        </div>
-        <div class="break-inside-avoid">
-          <img src="https://www.sikhnet.com/files/styles/content-wide/public/scald/image/darbar%20e%20khalsa.jpg?itok=f7CQFg4G"
-               alt="Darbar-E-Khalsa" class="w-full rounded-xl shadow-md hover:shadow-xl transition-all cursor-pointer hover:scale-[1.02]" onclick="openLightbox(this.src)">
-        </div>
-        <div class="break-inside-avoid">
-          <img src="https://nriinternet.com/Associations/USA/A_Z/I/IIGS/2013/M/IIGS_M1.jpg"
-               alt="DEK 2013" class="w-full rounded-xl shadow-md hover:shadow-xl transition-all cursor-pointer hover:scale-[1.02]" onclick="openLightbox(this.src)">
-        </div>
-        <div class="break-inside-avoid">
-          <img src="https://nriinternet.com/Associations/USA/A_Z/I/IIGS/2013/M/IIGS-M2.jpg"
-               alt="DEK 2013" class="w-full rounded-xl shadow-md hover:shadow-xl transition-all cursor-pointer hover:scale-[1.02]" onclick="openLightbox(this.src)">
-        </div>
-        <div class="break-inside-avoid">
-          <img src="https://nriinternet.com/Associations/USA/A_Z/I/IIGS/2013/M/IIGS_M3.jpg"
-               alt="DEK 2013" class="w-full rounded-xl shadow-md hover:shadow-xl transition-all cursor-pointer hover:scale-[1.02]" onclick="openLightbox(this.src)">
-        </div>
-        <div class="break-inside-avoid">
-          <img src="https://nriinternet.com/Associations/USA/A_Z/I/IIGS/2010/Photos/IIGS-044.jpg"
-               alt="DEK 2010" class="w-full rounded-xl shadow-md hover:shadow-xl transition-all cursor-pointer hover:scale-[1.02]" onclick="openLightbox(this.src)">
-        </div>
-        <div class="break-inside-avoid">
-          <img src="https://www.sikhchic.com/cms/articles/photo1/Papa-a.jpg"
-               alt="Papa Ji" class="w-full rounded-xl shadow-md hover:shadow-xl transition-all cursor-pointer hover:scale-[1.02]" onclick="openLightbox(this.src)">
-        </div>
-        <div class="break-inside-avoid">
-          <img src="https://www.sikhchic.com/cms/articles/photo1/Papa-b.jpg"
-               alt="Papa Ji" class="w-full rounded-xl shadow-md hover:shadow-xl transition-all cursor-pointer hover:scale-[1.02]" onclick="openLightbox(this.src)">
-        </div>
+        <div class="break-inside-avoid"><img src="https://dvncorestorageprod.blob.core.windows.net/files/OrganizationApplication/10102/Updates/IIGS_93rd%20Camp%20Group%20Pic_20250902002313698.jpg" alt="93rd Camp" class="w-full rounded-xl shadow-md hover:shadow-xl transition-all cursor-pointer hover:scale-[1.02]" onclick="openLightbox(this.src)"></div>
+        <div class="break-inside-avoid"><img src="https://dvncorestorageprod.blob.core.windows.net/files/OrganizationApplication/10102/Story/IIGS%20Camp_20231030173447903.jpg" alt="IIGS Camp" class="w-full rounded-xl shadow-md hover:shadow-xl transition-all cursor-pointer hover:scale-[1.02]" onclick="openLightbox(this.src)"></div>
+        <div class="break-inside-avoid"><img src="https://www.sikhnet.com/files/styles/content-wide/public/scald/image/darbar%20e%20khalsa.jpg?itok=f7CQFg4G" alt="Darbar-E-Khalsa" class="w-full rounded-xl shadow-md hover:shadow-xl transition-all cursor-pointer hover:scale-[1.02]" onclick="openLightbox(this.src)"></div>
+        <div class="break-inside-avoid"><img src="https://nriinternet.com/Associations/USA/A_Z/I/IIGS/2013/M/IIGS_M1.jpg" alt="DEK 2013" class="w-full rounded-xl shadow-md hover:shadow-xl transition-all cursor-pointer hover:scale-[1.02]" onclick="openLightbox(this.src)"></div>
+        <div class="break-inside-avoid"><img src="https://nriinternet.com/Associations/USA/A_Z/I/IIGS/2013/M/IIGS-M2.jpg" alt="DEK 2013" class="w-full rounded-xl shadow-md hover:shadow-xl transition-all cursor-pointer hover:scale-[1.02]" onclick="openLightbox(this.src)"></div>
+        <div class="break-inside-avoid"><img src="https://nriinternet.com/Associations/USA/A_Z/I/IIGS/2013/M/IIGS_M3.jpg" alt="DEK 2013" class="w-full rounded-xl shadow-md hover:shadow-xl transition-all cursor-pointer hover:scale-[1.02]" onclick="openLightbox(this.src)"></div>
+        <div class="break-inside-avoid"><img src="https://nriinternet.com/Associations/USA/A_Z/I/IIGS/2010/Photos/IIGS-044.jpg" alt="DEK 2010" class="w-full rounded-xl shadow-md hover:shadow-xl transition-all cursor-pointer hover:scale-[1.02]" onclick="openLightbox(this.src)"></div>
+        <div class="break-inside-avoid"><img src="https://www.sikhchic.com/cms/articles/photo1/Papa-a.jpg" alt="Papa Ji" class="w-full rounded-xl shadow-md hover:shadow-xl transition-all cursor-pointer hover:scale-[1.02]" onclick="openLightbox(this.src)"></div>
+        <div class="break-inside-avoid"><img src="https://www.sikhchic.com/cms/articles/photo1/Papa-b.jpg" alt="Papa Ji" class="w-full rounded-xl shadow-md hover:shadow-xl transition-all cursor-pointer hover:scale-[1.02]" onclick="openLightbox(this.src)"></div>
       </div>
     </div>
   </section>
@@ -456,113 +403,57 @@
   <!-- ============================================================
        DARBAR-E-KHALSA 2026
        ============================================================ -->
-  <section id="dek" class="py-20 lg:py-28 bg-gradient-to-br from-bark-900 via-bark-800 to-khanda-900 text-white">
+  <section id="dek" class="py-20 lg:py-28 bg-gradient-to-br from-royal-900 via-royal-800 to-slate-900 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16" data-aos="fade-up">
-        <p class="text-khanda-300 font-semibold tracking-wider uppercase text-sm mb-2">December 25, 2026</p>
+        <p class="text-gold-300 font-semibold tracking-wider uppercase text-sm mb-2">December 25, 2026</p>
         <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white">Darbar-E-Khalsa 2026</h2>
-        <p class="text-wheat-300/70 mt-3 text-lg">41st Annual Celebration</p>
-        <div class="mt-4 w-20 h-1 bg-gradient-to-r from-khanda-400 to-khanda-300 mx-auto rounded-full"></div>
+        <p class="text-slate-300/70 mt-3 text-lg">41st Annual Celebration</p>
+        <div class="mt-4 w-20 h-1 bg-gradient-to-r from-gold-400 to-gold-300 mx-auto rounded-full"></div>
       </div>
 
       <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <!-- DEK Images -->
         <div data-aos="fade-right" class="space-y-6">
-          <img src="https://dvncorestorageprod.blob.core.windows.net/files/ProjectApplication/100289/Updates/DEK_2025.1_20251115013559128.png"
-               alt="Darbar-E-Khalsa Poster"
-               class="rounded-2xl shadow-2xl w-full object-cover cursor-pointer hover:shadow-khanda-400/20 transition-shadow"
-               onclick="openLightbox(this.src)">
+          <img src="https://dvncorestorageprod.blob.core.windows.net/files/ProjectApplication/100289/Updates/DEK_2025.1_20251115013559128.png" alt="Darbar-E-Khalsa Poster" class="rounded-2xl shadow-2xl w-full object-cover cursor-pointer" onclick="openLightbox(this.src)">
           <div class="grid grid-cols-2 gap-4">
-            <img src="https://dvncorestorageprod.blob.core.windows.net/files/ProjectApplication/100289/Story/1e7a66bb-024e-4930-b4dd-b7e9443793c4_20251113210543803.jpg"
-                 alt="DEK Event" class="rounded-xl w-full h-40 object-cover cursor-pointer hover:shadow-lg transition-shadow" onclick="openLightbox(this.src)">
-            <img src="https://www.sikhnet.com/files/styles/content-wide/public/scald/image/darbar%20e%20khalsa.jpg?itok=f7CQFg4G"
-                 alt="DEK SikhNet" class="rounded-xl w-full h-40 object-cover cursor-pointer hover:shadow-lg transition-shadow" onclick="openLightbox(this.src)">
+            <img src="https://dvncorestorageprod.blob.core.windows.net/files/ProjectApplication/100289/Story/1e7a66bb-024e-4930-b4dd-b7e9443793c4_20251113210543803.jpg" alt="DEK Event" class="rounded-xl w-full h-40 object-cover cursor-pointer hover:shadow-lg transition-shadow" onclick="openLightbox(this.src)">
+            <img src="https://www.sikhnet.com/files/styles/content-wide/public/scald/image/darbar%20e%20khalsa.jpg?itok=f7CQFg4G" alt="DEK SikhNet" class="rounded-xl w-full h-40 object-cover cursor-pointer hover:shadow-lg transition-shadow" onclick="openLightbox(this.src)">
           </div>
         </div>
 
-        <!-- DEK Details -->
         <div data-aos="fade-left">
-          <!-- Countdown -->
-          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10 mb-8">
-            <h3 class="text-center font-heading text-xl font-bold text-khanda-300 mb-6">Countdown to Darbar-E-Khalsa</h3>
+          <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 mb-8">
+            <h3 class="text-center font-heading text-xl font-bold text-gold-300 mb-6">Countdown to Darbar-E-Khalsa</h3>
             <div class="grid grid-cols-4 gap-4 text-center">
-              <div>
-                <p id="countdown-days" class="font-heading text-4xl lg:text-5xl font-bold text-white">---</p>
-                <p class="text-wheat-300/60 text-xs uppercase tracking-wider mt-1">Days</p>
-              </div>
-              <div>
-                <p id="countdown-hours" class="font-heading text-4xl lg:text-5xl font-bold text-white">--</p>
-                <p class="text-wheat-300/60 text-xs uppercase tracking-wider mt-1">Hours</p>
-              </div>
-              <div>
-                <p id="countdown-minutes" class="font-heading text-4xl lg:text-5xl font-bold text-white">--</p>
-                <p class="text-wheat-300/60 text-xs uppercase tracking-wider mt-1">Minutes</p>
-              </div>
-              <div>
-                <p id="countdown-seconds" class="font-heading text-4xl lg:text-5xl font-bold text-white">--</p>
-                <p class="text-wheat-300/60 text-xs uppercase tracking-wider mt-1">Seconds</p>
-              </div>
+              <div><p id="countdown-days" class="font-heading text-4xl lg:text-5xl font-bold text-white">---</p><p class="text-slate-400 text-xs uppercase tracking-wider mt-1">Days</p></div>
+              <div><p id="countdown-hours" class="font-heading text-4xl lg:text-5xl font-bold text-white">--</p><p class="text-slate-400 text-xs uppercase tracking-wider mt-1">Hours</p></div>
+              <div><p id="countdown-minutes" class="font-heading text-4xl lg:text-5xl font-bold text-white">--</p><p class="text-slate-400 text-xs uppercase tracking-wider mt-1">Minutes</p></div>
+              <div><p id="countdown-seconds" class="font-heading text-4xl lg:text-5xl font-bold text-white">--</p><p class="text-slate-400 text-xs uppercase tracking-wider mt-1">Seconds</p></div>
             </div>
           </div>
 
-          <!-- Event Details -->
           <div class="space-y-5">
             <div class="flex gap-4">
-              <div class="w-10 h-10 bg-khanda-400/20 rounded-lg flex items-center justify-center shrink-0">
-                <i data-lucide="map-pin" class="w-5 h-5 text-khanda-300"></i>
-              </div>
-              <div>
-                <p class="font-semibold text-white">LA Fairgrounds (Fairplex)</p>
-                <p class="text-wheat-300/70 text-sm">1101 W. McKinley Ave, Pomona, CA 91768</p>
-                <p class="text-wheat-300/50 text-xs mt-1">Gate 17, Building 6 &bull; Parking $18 (card only)</p>
-              </div>
+              <div class="w-10 h-10 bg-gold-400/15 rounded-lg flex items-center justify-center shrink-0"><i data-lucide="map-pin" class="w-5 h-5 text-gold-300"></i></div>
+              <div><p class="font-semibold text-white">LA Fairgrounds (Fairplex)</p><p class="text-slate-300/70 text-sm">1101 W. McKinley Ave, Pomona, CA 91768</p><p class="text-slate-400/50 text-xs mt-1">Gate 17, Building 6 &bull; Parking $18 (card only)</p></div>
             </div>
             <div class="flex gap-4">
-              <div class="w-10 h-10 bg-khanda-400/20 rounded-lg flex items-center justify-center shrink-0">
-                <i data-lucide="users" class="w-5 h-5 text-khanda-300"></i>
-              </div>
-              <div>
-                <p class="font-semibold text-white">15,000+ Sangat</p>
-                <p class="text-wheat-300/70 text-sm">The largest annual Sikh gathering in North America</p>
-              </div>
+              <div class="w-10 h-10 bg-gold-400/15 rounded-lg flex items-center justify-center shrink-0"><i data-lucide="users" class="w-5 h-5 text-gold-300"></i></div>
+              <div><p class="font-semibold text-white">15,000+ Sangat</p><p class="text-slate-300/70 text-sm">The largest annual Sikh gathering in North America</p></div>
             </div>
             <div class="flex gap-4">
-              <div class="w-10 h-10 bg-khanda-400/20 rounded-lg flex items-center justify-center shrink-0">
-                <i data-lucide="clock" class="w-5 h-5 text-khanda-300"></i>
-              </div>
-              <div>
-                <p class="font-semibold text-white">Full Day Program</p>
-                <p class="text-wheat-300/70 text-sm">Asa Di Var from 6:30 AM, followed by Kirtan all day</p>
-              </div>
+              <div class="w-10 h-10 bg-gold-400/15 rounded-lg flex items-center justify-center shrink-0"><i data-lucide="clock" class="w-5 h-5 text-gold-300"></i></div>
+              <div><p class="font-semibold text-white">Full Day Program</p><p class="text-slate-300/70 text-sm">Asa Di Var from 6:30 AM, followed by Kirtan all day</p></div>
             </div>
           </div>
 
-          <!-- Highlights -->
           <div class="mt-8 grid grid-cols-2 gap-3">
-            <div class="bg-white/5 rounded-xl px-4 py-3 text-center">
-              <i data-lucide="music" class="w-5 h-5 text-khanda-300 mx-auto mb-1"></i>
-              <p class="text-sm text-wheat-200">Kirtan</p>
-            </div>
-            <div class="bg-white/5 rounded-xl px-4 py-3 text-center">
-              <i data-lucide="utensils" class="w-5 h-5 text-khanda-300 mx-auto mb-1"></i>
-              <p class="text-sm text-wheat-200">Langar</p>
-            </div>
-            <div class="bg-white/5 rounded-xl px-4 py-3 text-center">
-              <i data-lucide="store" class="w-5 h-5 text-khanda-300 mx-auto mb-1"></i>
-              <p class="text-sm text-wheat-200">Khalsa Bazar</p>
-            </div>
-            <div class="bg-white/5 rounded-xl px-4 py-3 text-center">
-              <i data-lucide="flag" class="w-5 h-5 text-khanda-300 mx-auto mb-1"></i>
-              <p class="text-sm text-wheat-200">Khalsa Parade</p>
-            </div>
-            <div class="bg-white/5 rounded-xl px-4 py-3 text-center">
-              <i data-lucide="award" class="w-5 h-5 text-khanda-300 mx-auto mb-1"></i>
-              <p class="text-sm text-wheat-200">Awards</p>
-            </div>
-            <div class="bg-white/5 rounded-xl px-4 py-3 text-center">
-              <i data-lucide="plane" class="w-5 h-5 text-khanda-300 mx-auto mb-1"></i>
-              <p class="text-sm text-wheat-200">Helicopter Farewell</p>
-            </div>
+            <div class="bg-white/5 rounded-xl px-4 py-3 text-center"><i data-lucide="music" class="w-5 h-5 text-gold-300 mx-auto mb-1"></i><p class="text-sm text-slate-200">Kirtan</p></div>
+            <div class="bg-white/5 rounded-xl px-4 py-3 text-center"><i data-lucide="utensils" class="w-5 h-5 text-gold-300 mx-auto mb-1"></i><p class="text-sm text-slate-200">Langar</p></div>
+            <div class="bg-white/5 rounded-xl px-4 py-3 text-center"><i data-lucide="store" class="w-5 h-5 text-gold-300 mx-auto mb-1"></i><p class="text-sm text-slate-200">Khalsa Bazar</p></div>
+            <div class="bg-white/5 rounded-xl px-4 py-3 text-center"><i data-lucide="flag" class="w-5 h-5 text-gold-300 mx-auto mb-1"></i><p class="text-sm text-slate-200">Khalsa Parade</p></div>
+            <div class="bg-white/5 rounded-xl px-4 py-3 text-center"><i data-lucide="award" class="w-5 h-5 text-gold-300 mx-auto mb-1"></i><p class="text-sm text-slate-200">Awards</p></div>
+            <div class="bg-white/5 rounded-xl px-4 py-3 text-center"><i data-lucide="plane" class="w-5 h-5 text-gold-300 mx-auto mb-1"></i><p class="text-sm text-slate-200">Helicopter Farewell</p></div>
           </div>
         </div>
       </div>
@@ -570,74 +461,68 @@
   </section>
 
   <!-- ============================================================
+       STORIES & ARTICLES (NEW)
+       ============================================================ -->
+  <section id="stories" class="py-20 lg:py-28 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <p class="text-royal-600 font-semibold tracking-wider uppercase text-sm mb-2">Read</p>
+        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-royal-900">Stories &amp; Articles</h2>
+        <p class="text-slate-500 mt-3 max-w-2xl mx-auto">Voices from the IIGS community &mdash; personal essays, poems, camp experiences, and reflections on Sikh faith and heritage.</p>
+        <div class="mt-4 w-20 h-1 bg-gradient-to-r from-gold-400 to-gold-600 mx-auto rounded-full"></div>
+      </div>
+
+      <!-- Category Filters -->
+      <div class="flex flex-wrap justify-center gap-2 mb-10" data-aos="fade-up">
+        <button class="filter-btn active" data-category="All">All</button>
+        <button class="filter-btn" data-category="Inspirational">Inspirational</button>
+        <button class="filter-btn" data-category="Faith & History">Faith & History</button>
+        <button class="filter-btn" data-category="Camp Experiences">Camp Experiences</button>
+        <button class="filter-btn" data-category="Poetry">Poetry</button>
+        <button class="filter-btn" data-category="Events">Events</button>
+        <button class="filter-btn" data-category="Community">Community</button>
+      </div>
+
+      <!-- Stories Grid (rendered by JS) -->
+      <div id="stories-grid" class="stories-grid"></div>
+    </div>
+  </section>
+
+  <!-- Story Modal -->
+  <div id="story-modal" class="story-modal" onclick="if(event.target===this)closeStory()">
+    <div class="story-modal-backdrop" onclick="closeStory()"></div>
+    <div class="story-modal-content">
+      <button onclick="closeStory()" class="absolute top-4 right-4 w-10 h-10 bg-slate-100 hover:bg-slate-200 rounded-full flex items-center justify-center text-slate-500 transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <span id="story-modal-badge" class="story-badge badge-faith"></span>
+      <h2 id="story-modal-title" class="font-heading text-2xl lg:text-3xl font-bold text-royal-900 mt-3 mb-2"></h2>
+      <p id="story-modal-author" class="text-royal-600 font-semibold text-sm mb-6"></p>
+      <div id="story-modal-body" class="prose prose-slate max-w-none text-slate-600 leading-relaxed space-y-4"></div>
+    </div>
+  </div>
+
+  <!-- ============================================================
        THE SIKH PORTRAIT
        ============================================================ -->
-  <section id="portraits" class="py-20 lg:py-28 bg-wheat-50">
+  <section id="portraits" class="py-20 lg:py-28 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16" data-aos="fade-up">
-        <p class="text-khanda-500 font-semibold tracking-wider uppercase text-sm mb-2">Publication</p>
-        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-bark-900">The Sikh Portrait</h2>
-        <p class="text-bark-500 mt-3 max-w-2xl mx-auto">A curated collection of Sikh portraits celebrating the beauty, dignity, and diversity of the Khalsa Panth.</p>
-        <div class="mt-4 w-20 h-1 bg-gradient-to-r from-khanda-400 to-khanda-600 mx-auto rounded-full"></div>
+        <p class="text-royal-600 font-semibold tracking-wider uppercase text-sm mb-2">Publication</p>
+        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-royal-900">The Sikh Portrait</h2>
+        <p class="text-slate-500 mt-3 max-w-2xl mx-auto">A curated collection of Sikh portraits celebrating the beauty, dignity, and diversity of the Khalsa Panth.</p>
+        <div class="mt-4 w-20 h-1 bg-gradient-to-r from-gold-400 to-gold-600 mx-auto rounded-full"></div>
       </div>
 
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5" data-aos="fade-up">
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-          <img src="https://static.wixstatic.com/media/fb9c60_0022226423004b0798a724306d5d9905~mv2.jpg/v1/fill/w_400,h_450,al_c,q_80/fb9c60_0022226423004b0798a724306d5d9905~mv2.jpg"
-               alt="Sikh Portrait" class="w-full h-64 sm:h-72 object-cover group-hover:scale-105 transition-transform duration-500">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-            <p class="text-white text-sm font-medium">The Sikh Portrait Collection</p>
-          </div>
-        </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-          <img src="https://static.wixstatic.com/media/fb9c60_0e5494721b1a4a9abd660c0063532c00.jpg/v1/fill/w_400,h_450,al_c,q_80/fb9c60_0e5494721b1a4a9abd660c0063532c00.jpg"
-               alt="Sikh Portrait" class="w-full h-64 sm:h-72 object-cover group-hover:scale-105 transition-transform duration-500">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-            <p class="text-white text-sm font-medium">The Sikh Portrait Collection</p>
-          </div>
-        </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-          <img src="https://static.wixstatic.com/media/fb9c60_17e63491db774faba67ed27db0c15b98~mv2.jpg/v1/fill/w_400,h_450,al_c,q_80/fb9c60_17e63491db774faba67ed27db0c15b98~mv2.jpg"
-               alt="Sikh Portrait" class="w-full h-64 sm:h-72 object-cover group-hover:scale-105 transition-transform duration-500">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-            <p class="text-white text-sm font-medium">The Sikh Portrait Collection</p>
-          </div>
-        </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-          <img src="https://static.wixstatic.com/media/fb9c60_192d9b621a3745c38099ad38d4a4ed4b.jpg/v1/fill/w_400,h_450,al_c,q_80/fb9c60_192d9b621a3745c38099ad38d4a4ed4b.jpg"
-               alt="Sikh Portrait" class="w-full h-64 sm:h-72 object-cover group-hover:scale-105 transition-transform duration-500">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-            <p class="text-white text-sm font-medium">The Sikh Portrait Collection</p>
-          </div>
-        </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-          <img src="https://static.wixstatic.com/media/fb9c60_279bc317496a4568a595236a0c39adc1.png/v1/fill/w_400,h_450,al_c,q_85/fb9c60_279bc317496a4568a595236a0c39adc1.png"
-               alt="Sikh Portrait" class="w-full h-64 sm:h-72 object-cover group-hover:scale-105 transition-transform duration-500">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-            <p class="text-white text-sm font-medium">The Sikh Portrait Collection</p>
-          </div>
-        </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-          <img src="https://static.wixstatic.com/media/fb9c60_439f561cfac64361a3ca2655738aac96.jpg/v1/fill/w_400,h_450,al_c,q_80/fb9c60_439f561cfac64361a3ca2655738aac96.jpg"
-               alt="Sikh Portrait" class="w-full h-64 sm:h-72 object-cover group-hover:scale-105 transition-transform duration-500">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-            <p class="text-white text-sm font-medium">The Sikh Portrait Collection</p>
-          </div>
-        </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-          <img src="https://static.wixstatic.com/media/fb9c60_51b2d97bea5c46408f84c74f3481f06b~mv2.jpg/v1/fill/w_400,h_450,al_c,q_80/fb9c60_51b2d97bea5c46408f84c74f3481f06b~mv2.jpg"
-               alt="Sikh Portrait" class="w-full h-64 sm:h-72 object-cover group-hover:scale-105 transition-transform duration-500">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-            <p class="text-white text-sm font-medium">The Sikh Portrait Collection</p>
-          </div>
-        </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-          <img src="https://static.wixstatic.com/media/fb9c60_73f7c696304643f9aff25b622a24a631~mv2.jpg/v1/fill/w_400,h_450,al_c,q_80/fb9c60_73f7c696304643f9aff25b622a24a631~mv2.jpg"
-               alt="Sikh Portrait" class="w-full h-64 sm:h-72 object-cover group-hover:scale-105 transition-transform duration-500">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-            <p class="text-white text-sm font-medium">The Sikh Portrait Collection</p>
-          </div>
-        </div>
+        <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all cursor-pointer" onclick="openLightbox(this.querySelector('img').src)"><img src="https://static.wixstatic.com/media/fb9c60_0022226423004b0798a724306d5d9905~mv2.jpg/v1/fill/w_400,h_450,al_c,q_80/fb9c60_0022226423004b0798a724306d5d9905~mv2.jpg" alt="Sikh Portrait" class="w-full h-64 sm:h-72 object-cover group-hover:scale-105 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4"><p class="text-white text-sm font-medium">The Sikh Portrait Collection</p></div></div>
+        <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all cursor-pointer" onclick="openLightbox(this.querySelector('img').src)"><img src="https://static.wixstatic.com/media/fb9c60_0e5494721b1a4a9abd660c0063532c00.jpg/v1/fill/w_400,h_450,al_c,q_80/fb9c60_0e5494721b1a4a9abd660c0063532c00.jpg" alt="Sikh Portrait" class="w-full h-64 sm:h-72 object-cover group-hover:scale-105 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4"><p class="text-white text-sm font-medium">The Sikh Portrait Collection</p></div></div>
+        <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all cursor-pointer" onclick="openLightbox(this.querySelector('img').src)"><img src="https://static.wixstatic.com/media/fb9c60_17e63491db774faba67ed27db0c15b98~mv2.jpg/v1/fill/w_400,h_450,al_c,q_80/fb9c60_17e63491db774faba67ed27db0c15b98~mv2.jpg" alt="Sikh Portrait" class="w-full h-64 sm:h-72 object-cover group-hover:scale-105 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4"><p class="text-white text-sm font-medium">The Sikh Portrait Collection</p></div></div>
+        <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all cursor-pointer" onclick="openLightbox(this.querySelector('img').src)"><img src="https://static.wixstatic.com/media/fb9c60_192d9b621a3745c38099ad38d4a4ed4b.jpg/v1/fill/w_400,h_450,al_c,q_80/fb9c60_192d9b621a3745c38099ad38d4a4ed4b.jpg" alt="Sikh Portrait" class="w-full h-64 sm:h-72 object-cover group-hover:scale-105 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4"><p class="text-white text-sm font-medium">The Sikh Portrait Collection</p></div></div>
+        <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all cursor-pointer" onclick="openLightbox(this.querySelector('img').src)"><img src="https://static.wixstatic.com/media/fb9c60_279bc317496a4568a595236a0c39adc1.png/v1/fill/w_400,h_450,al_c,q_85/fb9c60_279bc317496a4568a595236a0c39adc1.png" alt="Sikh Portrait" class="w-full h-64 sm:h-72 object-cover group-hover:scale-105 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4"><p class="text-white text-sm font-medium">The Sikh Portrait Collection</p></div></div>
+        <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all cursor-pointer" onclick="openLightbox(this.querySelector('img').src)"><img src="https://static.wixstatic.com/media/fb9c60_439f561cfac64361a3ca2655738aac96.jpg/v1/fill/w_400,h_450,al_c,q_80/fb9c60_439f561cfac64361a3ca2655738aac96.jpg" alt="Sikh Portrait" class="w-full h-64 sm:h-72 object-cover group-hover:scale-105 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4"><p class="text-white text-sm font-medium">The Sikh Portrait Collection</p></div></div>
+        <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all cursor-pointer" onclick="openLightbox(this.querySelector('img').src)"><img src="https://static.wixstatic.com/media/fb9c60_51b2d97bea5c46408f84c74f3481f06b~mv2.jpg/v1/fill/w_400,h_450,al_c,q_80/fb9c60_51b2d97bea5c46408f84c74f3481f06b~mv2.jpg" alt="Sikh Portrait" class="w-full h-64 sm:h-72 object-cover group-hover:scale-105 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4"><p class="text-white text-sm font-medium">The Sikh Portrait Collection</p></div></div>
+        <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all cursor-pointer" onclick="openLightbox(this.querySelector('img').src)"><img src="https://static.wixstatic.com/media/fb9c60_73f7c696304643f9aff25b622a24a631~mv2.jpg/v1/fill/w_400,h_450,al_c,q_80/fb9c60_73f7c696304643f9aff25b622a24a631~mv2.jpg" alt="Sikh Portrait" class="w-full h-64 sm:h-72 object-cover group-hover:scale-105 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4"><p class="text-white text-sm font-medium">The Sikh Portrait Collection</p></div></div>
       </div>
     </div>
   </section>
@@ -645,132 +530,49 @@
   <!-- ============================================================
        KIRTAN MUSIC LIBRARY
        ============================================================ -->
-  <section id="kirtan" class="py-20 lg:py-28 bg-white">
+  <section id="kirtan" class="py-20 lg:py-28 bg-slate-50">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16" data-aos="fade-up">
-        <p class="text-khanda-500 font-semibold tracking-wider uppercase text-sm mb-2">Listen</p>
-        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-bark-900">Kirtan Library</h2>
-        <p class="text-bark-500 mt-3 max-w-xl mx-auto">Experience the divine kirtan from IIGS Virtual Global Dewans. Click play to listen.</p>
-        <div class="mt-4 w-20 h-1 bg-gradient-to-r from-khanda-400 to-khanda-600 mx-auto rounded-full"></div>
+        <p class="text-royal-600 font-semibold tracking-wider uppercase text-sm mb-2">Listen</p>
+        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-royal-900">Kirtan Library</h2>
+        <p class="text-slate-500 mt-3 max-w-xl mx-auto">Experience the divine kirtan from IIGS Virtual Global Dewans. Click play to listen.</p>
+        <div class="mt-4 w-20 h-1 bg-gradient-to-r from-gold-400 to-gold-600 mx-auto rounded-full"></div>
       </div>
 
-      <!-- Player Container -->
-      <div data-aos="fade-up" class="bg-bark-50 rounded-2xl border border-bark-200 overflow-hidden shadow-lg relative">
-        <!-- Header -->
-        <div class="bg-gradient-to-r from-bark-800 to-bark-900 px-6 py-4 flex items-center gap-4">
-          <div class="w-12 h-12 bg-khanda-400/20 rounded-xl flex items-center justify-center">
-            <i data-lucide="disc-3" class="w-6 h-6 text-khanda-300"></i>
-          </div>
-          <div>
-            <h3 class="text-white font-semibold">IIGS Kirtan Collection</h3>
-            <p class="text-wheat-300/60 text-sm">Virtual Global Dewans &amp; More</p>
-          </div>
+      <div data-aos="fade-up" class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-lg relative">
+        <div class="bg-gradient-to-r from-royal-800 to-royal-900 px-6 py-4 flex items-center gap-4">
+          <div class="w-12 h-12 bg-gold-400/20 rounded-xl flex items-center justify-center"><i data-lucide="disc-3" class="w-6 h-6 text-gold-300"></i></div>
+          <div><h3 class="text-white font-semibold">IIGS Kirtan Collection</h3><p class="text-slate-300/60 text-sm">Virtual Global Dewans &amp; More</p></div>
         </div>
-
-        <!-- Track List -->
-        <div class="divide-y divide-bark-100">
-          <!-- Track 1 -->
-          <div class="kirtan-track flex items-center gap-4 px-6 py-4 hover:bg-khanda-50/50 transition-colors border border-transparent rounded-lg cursor-pointer"
-               onclick="playKirtan('2042391212898729', '179th Virtual Global Kirtan Dewan', 'IIGS Global Sangat', this.querySelector('.kirtan-play-btn'))">
-            <span class="text-bark-400 text-sm w-6 text-center shrink-0">1</span>
-            <button class="kirtan-play-btn w-10 h-10 bg-khanda-400 hover:bg-khanda-500 text-white rounded-full flex items-center justify-center shrink-0 transition-colors shadow-md">
-              <i data-lucide="play" class="w-5 h-5"></i>
-            </button>
-            <div class="flex-1 min-w-0">
-              <p class="font-semibold text-bark-800 truncate">179th Virtual Global Kirtan Dewan</p>
-              <p class="text-bark-500 text-sm truncate">IIGS Global Sangat</p>
-            </div>
-            <span class="text-bark-400 text-sm shrink-0">Live</span>
+        <div class="divide-y divide-slate-100">
+          <div class="kirtan-track flex items-center gap-4 px-6 py-4 hover:bg-royal-50/50 transition-colors border border-transparent rounded-lg cursor-pointer" onclick="playKirtan('2042391212898729', '179th Virtual Global Kirtan Dewan', 'IIGS Global Sangat', this.querySelector('.kirtan-play-btn'))">
+            <span class="text-slate-400 text-sm w-6 text-center shrink-0">1</span>
+            <button class="kirtan-play-btn w-10 h-10 bg-royal-600 hover:bg-royal-700 text-white rounded-full flex items-center justify-center shrink-0 transition-colors shadow-md"><i data-lucide="play" class="w-5 h-5"></i></button>
+            <div class="flex-1 min-w-0"><p class="font-semibold text-slate-800 truncate">179th Virtual Global Kirtan Dewan</p><p class="text-slate-500 text-sm truncate">IIGS Global Sangat</p></div>
+            <span class="text-slate-400 text-sm shrink-0">Live</span>
           </div>
-
-          <!-- Track 2 -->
-          <div class="kirtan-track flex items-center gap-4 px-6 py-4 hover:bg-khanda-50/50 transition-colors border border-transparent rounded-lg cursor-pointer"
-               onclick="playKirtan('843921813288143', '122nd Virtual Global Kirtan Dewan', 'IIGS Global Sangat', this.querySelector('.kirtan-play-btn'))">
-            <span class="text-bark-400 text-sm w-6 text-center shrink-0">2</span>
-            <button class="kirtan-play-btn w-10 h-10 bg-khanda-400 hover:bg-khanda-500 text-white rounded-full flex items-center justify-center shrink-0 transition-colors shadow-md">
-              <i data-lucide="play" class="w-5 h-5"></i>
-            </button>
-            <div class="flex-1 min-w-0">
-              <p class="font-semibold text-bark-800 truncate">122nd Virtual Global Kirtan Dewan</p>
-              <p class="text-bark-500 text-sm truncate">IIGS Global Sangat</p>
-            </div>
-            <span class="text-bark-400 text-sm shrink-0">Live</span>
+          <div class="kirtan-track flex items-center gap-4 px-6 py-4 hover:bg-royal-50/50 transition-colors border border-transparent rounded-lg cursor-pointer" onclick="playKirtan('843921813288143', '122nd Virtual Global Kirtan Dewan', 'IIGS Global Sangat', this.querySelector('.kirtan-play-btn'))">
+            <span class="text-slate-400 text-sm w-6 text-center shrink-0">2</span>
+            <button class="kirtan-play-btn w-10 h-10 bg-royal-600 hover:bg-royal-700 text-white rounded-full flex items-center justify-center shrink-0 transition-colors shadow-md"><i data-lucide="play" class="w-5 h-5"></i></button>
+            <div class="flex-1 min-w-0"><p class="font-semibold text-slate-800 truncate">122nd Virtual Global Kirtan Dewan</p><p class="text-slate-500 text-sm truncate">IIGS Global Sangat</p></div>
+            <span class="text-slate-400 text-sm shrink-0">Live</span>
           </div>
-
-          <!-- Track 3 -->
-          <div class="kirtan-track flex items-center gap-4 px-6 py-4 hover:bg-khanda-50/50 transition-colors border border-transparent rounded-lg cursor-pointer"
-               onclick="playKirtan('637002794230366', '90th Virtual Global Kirtan Dewan', 'IIGS Global Sangat', this.querySelector('.kirtan-play-btn'))">
-            <span class="text-bark-400 text-sm w-6 text-center shrink-0">3</span>
-            <button class="kirtan-play-btn w-10 h-10 bg-khanda-400 hover:bg-khanda-500 text-white rounded-full flex items-center justify-center shrink-0 transition-colors shadow-md">
-              <i data-lucide="play" class="w-5 h-5"></i>
-            </button>
-            <div class="flex-1 min-w-0">
-              <p class="font-semibold text-bark-800 truncate">90th Virtual Global Kirtan Dewan</p>
-              <p class="text-bark-500 text-sm truncate">IIGS Global Sangat</p>
-            </div>
-            <span class="text-bark-400 text-sm shrink-0">Live</span>
+          <div class="kirtan-track flex items-center gap-4 px-6 py-4 hover:bg-royal-50/50 transition-colors border border-transparent rounded-lg cursor-pointer" onclick="playKirtan('637002794230366', '90th Virtual Global Kirtan Dewan', 'IIGS Global Sangat', this.querySelector('.kirtan-play-btn'))">
+            <span class="text-slate-400 text-sm w-6 text-center shrink-0">3</span>
+            <button class="kirtan-play-btn w-10 h-10 bg-royal-600 hover:bg-royal-700 text-white rounded-full flex items-center justify-center shrink-0 transition-colors shadow-md"><i data-lucide="play" class="w-5 h-5"></i></button>
+            <div class="flex-1 min-w-0"><p class="font-semibold text-slate-800 truncate">90th Virtual Global Kirtan Dewan</p><p class="text-slate-500 text-sm truncate">IIGS Global Sangat</p></div>
+            <span class="text-slate-400 text-sm shrink-0">Live</span>
           </div>
-
-          <!-- Track 4 — Coming Soon -->
-          <div class="kirtan-track flex items-center gap-4 px-6 py-4 opacity-50 cursor-default">
-            <span class="text-bark-400 text-sm w-6 text-center shrink-0">4</span>
-            <div class="w-10 h-10 bg-bark-200 text-bark-400 rounded-full flex items-center justify-center shrink-0">
-              <i data-lucide="play" class="w-5 h-5"></i>
-            </div>
-            <div class="flex-1 min-w-0">
-              <p class="font-semibold text-bark-600 truncate">Asa Di Var</p>
-              <p class="text-bark-400 text-sm truncate">Various Raagi Jathas</p>
-            </div>
-            <span class="text-bark-300 text-xs bg-bark-100 px-2 py-1 rounded-full shrink-0">Coming Soon</span>
-          </div>
-
-          <!-- Track 5 — Coming Soon -->
-          <div class="kirtan-track flex items-center gap-4 px-6 py-4 opacity-50 cursor-default">
-            <span class="text-bark-400 text-sm w-6 text-center shrink-0">5</span>
-            <div class="w-10 h-10 bg-bark-200 text-bark-400 rounded-full flex items-center justify-center shrink-0">
-              <i data-lucide="play" class="w-5 h-5"></i>
-            </div>
-            <div class="flex-1 min-w-0">
-              <p class="font-semibold text-bark-600 truncate">Sukhmani Sahib</p>
-              <p class="text-bark-400 text-sm truncate">Various Raagi Jathas</p>
-            </div>
-            <span class="text-bark-300 text-xs bg-bark-100 px-2 py-1 rounded-full shrink-0">Coming Soon</span>
-          </div>
-
-          <!-- Track 6 — Coming Soon -->
-          <div class="kirtan-track flex items-center gap-4 px-6 py-4 opacity-50 cursor-default">
-            <span class="text-bark-400 text-sm w-6 text-center shrink-0">6</span>
-            <div class="w-10 h-10 bg-bark-200 text-bark-400 rounded-full flex items-center justify-center shrink-0">
-              <i data-lucide="play" class="w-5 h-5"></i>
-            </div>
-            <div class="flex-1 min-w-0">
-              <p class="font-semibold text-bark-600 truncate">Rehraas Sahib</p>
-              <p class="text-bark-400 text-sm truncate">Various Raagi Jathas</p>
-            </div>
-            <span class="text-bark-300 text-xs bg-bark-100 px-2 py-1 rounded-full shrink-0">Coming Soon</span>
-          </div>
+          <div class="kirtan-track flex items-center gap-4 px-6 py-4 opacity-50 cursor-default"><span class="text-slate-400 text-sm w-6 text-center shrink-0">4</span><div class="w-10 h-10 bg-slate-200 text-slate-400 rounded-full flex items-center justify-center shrink-0"><i data-lucide="play" class="w-5 h-5"></i></div><div class="flex-1 min-w-0"><p class="font-semibold text-slate-600 truncate">Asa Di Var</p><p class="text-slate-400 text-sm truncate">Various Raagi Jathas</p></div><span class="text-slate-300 text-xs bg-slate-100 px-2 py-1 rounded-full shrink-0">Coming Soon</span></div>
+          <div class="kirtan-track flex items-center gap-4 px-6 py-4 opacity-50 cursor-default"><span class="text-slate-400 text-sm w-6 text-center shrink-0">5</span><div class="w-10 h-10 bg-slate-200 text-slate-400 rounded-full flex items-center justify-center shrink-0"><i data-lucide="play" class="w-5 h-5"></i></div><div class="flex-1 min-w-0"><p class="font-semibold text-slate-600 truncate">Sukhmani Sahib</p><p class="text-slate-400 text-sm truncate">Various Raagi Jathas</p></div><span class="text-slate-300 text-xs bg-slate-100 px-2 py-1 rounded-full shrink-0">Coming Soon</span></div>
+          <div class="kirtan-track flex items-center gap-4 px-6 py-4 opacity-50 cursor-default"><span class="text-slate-400 text-sm w-6 text-center shrink-0">6</span><div class="w-10 h-10 bg-slate-200 text-slate-400 rounded-full flex items-center justify-center shrink-0"><i data-lucide="play" class="w-5 h-5"></i></div><div class="flex-1 min-w-0"><p class="font-semibold text-slate-600 truncate">Rehraas Sahib</p><p class="text-slate-400 text-sm truncate">Various Raagi Jathas</p></div><span class="text-slate-300 text-xs bg-slate-100 px-2 py-1 rounded-full shrink-0">Coming Soon</span></div>
         </div>
-
-        <!-- Now Playing Bar -->
-        <div id="kirtan-player" class="hidden bg-gradient-to-r from-bark-800 to-bark-900 px-6 py-4 border-t border-bark-700">
+        <div id="kirtan-player" class="hidden bg-gradient-to-r from-royal-800 to-royal-900 px-6 py-4 border-t border-royal-700">
           <div class="flex items-center gap-4">
-            <div class="w-10 h-10 bg-khanda-400/20 rounded-lg flex items-center justify-center shrink-0 animate-pulse">
-              <i data-lucide="disc-3" class="w-5 h-5 text-khanda-300"></i>
-            </div>
-            <div class="flex-1 min-w-0">
-              <p id="player-title" class="text-white text-sm font-semibold truncate">Not Playing</p>
-              <p id="player-artist" class="text-wheat-300/60 text-xs truncate">Select a track</p>
-            </div>
-            <div class="flex items-center gap-2">
-              <div class="flex gap-0.5">
-                <div class="w-1 h-4 bg-khanda-400 rounded-full animate-pulse" style="animation-delay:0ms"></div>
-                <div class="w-1 h-6 bg-khanda-400 rounded-full animate-pulse" style="animation-delay:150ms"></div>
-                <div class="w-1 h-3 bg-khanda-400 rounded-full animate-pulse" style="animation-delay:300ms"></div>
-                <div class="w-1 h-5 bg-khanda-400 rounded-full animate-pulse" style="animation-delay:100ms"></div>
-              </div>
-            </div>
+            <div class="w-10 h-10 bg-gold-400/20 rounded-lg flex items-center justify-center shrink-0 animate-pulse"><i data-lucide="disc-3" class="w-5 h-5 text-gold-300"></i></div>
+            <div class="flex-1 min-w-0"><p id="player-title" class="text-white text-sm font-semibold truncate">Not Playing</p><p id="player-artist" class="text-slate-300/60 text-xs truncate">Select a track</p></div>
+            <div class="flex items-center gap-2"><div class="flex gap-0.5"><div class="w-1 h-4 bg-gold-400 rounded-full animate-pulse" style="animation-delay:0ms"></div><div class="w-1 h-6 bg-gold-400 rounded-full animate-pulse" style="animation-delay:150ms"></div><div class="w-1 h-3 bg-gold-400 rounded-full animate-pulse" style="animation-delay:300ms"></div><div class="w-1 h-5 bg-gold-400 rounded-full animate-pulse" style="animation-delay:100ms"></div></div></div>
           </div>
-          <!-- Hidden iframe container -->
           <div id="player-frame" class="absolute w-0 h-0 overflow-hidden" aria-hidden="true"></div>
         </div>
       </div>
@@ -780,79 +582,47 @@
   <!-- ============================================================
        LEARNING ZONE
        ============================================================ -->
-  <section id="learning" class="py-20 lg:py-28 bg-bark-50">
+  <section id="learning" class="py-20 lg:py-28 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16" data-aos="fade-up">
-        <p class="text-khanda-500 font-semibold tracking-wider uppercase text-sm mb-2">Grow</p>
-        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-bark-900">Learning Zone</h2>
-        <div class="mt-4 w-20 h-1 bg-gradient-to-r from-khanda-400 to-khanda-600 mx-auto rounded-full"></div>
+        <p class="text-royal-600 font-semibold tracking-wider uppercase text-sm mb-2">Grow</p>
+        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-royal-900">Learning Zone</h2>
+        <div class="mt-4 w-20 h-1 bg-gradient-to-r from-gold-400 to-gold-600 mx-auto rounded-full"></div>
       </div>
 
-      <!-- Learning Cards -->
       <div class="grid md:grid-cols-3 gap-8 mb-16">
-        <div data-aos="fade-up" data-aos-delay="0" class="bg-white rounded-2xl p-8 shadow-lg border border-bark-100 hover:shadow-xl transition-shadow text-center">
-          <div class="w-16 h-16 bg-gradient-to-br from-khanda-50 to-khanda-100 rounded-2xl flex items-center justify-center mx-auto mb-5">
-            <i data-lucide="book-open" class="w-8 h-8 text-khanda-500"></i>
-          </div>
-          <h4 class="font-heading text-xl font-bold text-bark-900 mb-3">Daily Banis</h4>
-          <p class="text-bark-600 text-sm leading-relaxed mb-4">Start your day with Japji Sahib, Jaap Sahib, Tav Prasad Savaiye, Chaupai Sahib, and Anand Sahib. Evening: Rehraas Sahib. Night: Kirtan Sohila.</p>
-          <a href="https://www.youtube.com/c/IIGSCalling" target="_blank" class="text-khanda-500 hover:text-khanda-600 font-semibold text-sm inline-flex items-center gap-1">
-            Listen on YouTube <i data-lucide="external-link" class="w-4 h-4"></i>
-          </a>
+        <div data-aos="fade-up" data-aos-delay="0" class="bg-slate-50 rounded-2xl p-8 shadow-lg border border-slate-100 hover:shadow-xl transition-shadow text-center">
+          <div class="w-16 h-16 bg-gradient-to-br from-royal-50 to-royal-100 rounded-2xl flex items-center justify-center mx-auto mb-5"><i data-lucide="book-open" class="w-8 h-8 text-royal-600"></i></div>
+          <h4 class="font-heading text-xl font-bold text-royal-900 mb-3">Daily Banis</h4>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">Start your day with Japji Sahib, Jaap Sahib, Tav Prasad Savaiye, Chaupai Sahib, and Anand Sahib. Evening: Rehraas Sahib. Night: Kirtan Sohila.</p>
+          <a href="https://www.youtube.com/c/IIGSCalling" target="_blank" class="text-royal-600 hover:text-royal-700 font-semibold text-sm inline-flex items-center gap-1">Listen on YouTube <i data-lucide="external-link" class="w-4 h-4"></i></a>
         </div>
-        <div data-aos="fade-up" data-aos-delay="100" class="bg-white rounded-2xl p-8 shadow-lg border border-bark-100 hover:shadow-xl transition-shadow text-center">
-          <div class="w-16 h-16 bg-gradient-to-br from-khanda-50 to-khanda-100 rounded-2xl flex items-center justify-center mx-auto mb-5">
-            <i data-lucide="music" class="w-8 h-8 text-khanda-500"></i>
-          </div>
-          <h4 class="font-heading text-xl font-bold text-bark-900 mb-3">Learn Kirtan</h4>
-          <p class="text-bark-600 text-sm leading-relaxed mb-4">Watch kirtan tutorials from IIGS camps. Learn harmonium, tabla, and raag-based Gurbani kirtan from experienced raagi jathas and camp instructors.</p>
-          <a href="https://www.youtube.com/c/IIGSCalling" target="_blank" class="text-khanda-500 hover:text-khanda-600 font-semibold text-sm inline-flex items-center gap-1">
-            Watch Tutorials <i data-lucide="external-link" class="w-4 h-4"></i>
-          </a>
+        <div data-aos="fade-up" data-aos-delay="100" class="bg-slate-50 rounded-2xl p-8 shadow-lg border border-slate-100 hover:shadow-xl transition-shadow text-center">
+          <div class="w-16 h-16 bg-gradient-to-br from-royal-50 to-royal-100 rounded-2xl flex items-center justify-center mx-auto mb-5"><i data-lucide="music" class="w-8 h-8 text-royal-600"></i></div>
+          <h4 class="font-heading text-xl font-bold text-royal-900 mb-3">Learn Kirtan</h4>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">Watch kirtan tutorials from IIGS camps. Learn harmonium, tabla, and raag-based Gurbani kirtan from experienced raagi jathas and camp instructors.</p>
+          <a href="https://www.youtube.com/c/IIGSCalling" target="_blank" class="text-royal-600 hover:text-royal-700 font-semibold text-sm inline-flex items-center gap-1">Watch Tutorials <i data-lucide="external-link" class="w-4 h-4"></i></a>
         </div>
-        <div data-aos="fade-up" data-aos-delay="200" class="bg-white rounded-2xl p-8 shadow-lg border border-bark-100 hover:shadow-xl transition-shadow text-center">
-          <div class="w-16 h-16 bg-gradient-to-br from-khanda-50 to-khanda-100 rounded-2xl flex items-center justify-center mx-auto mb-5">
-            <i data-lucide="mic" class="w-8 h-8 text-khanda-500"></i>
-          </div>
-          <h4 class="font-heading text-xl font-bold text-bark-900 mb-3">Talks &amp; Lectures</h4>
-          <p class="text-bark-600 text-sm leading-relaxed mb-4">Inspiring talks on Sikh history, philosophy, and contemporary issues. Recordings from camps, dewans, and special guest speakers.</p>
-          <a href="https://www.youtube.com/c/IIGSCalling" target="_blank" class="text-khanda-500 hover:text-khanda-600 font-semibold text-sm inline-flex items-center gap-1">
-            Browse Talks <i data-lucide="external-link" class="w-4 h-4"></i>
-          </a>
+        <div data-aos="fade-up" data-aos-delay="200" class="bg-slate-50 rounded-2xl p-8 shadow-lg border border-slate-100 hover:shadow-xl transition-shadow text-center">
+          <div class="w-16 h-16 bg-gradient-to-br from-royal-50 to-royal-100 rounded-2xl flex items-center justify-center mx-auto mb-5"><i data-lucide="mic" class="w-8 h-8 text-royal-600"></i></div>
+          <h4 class="font-heading text-xl font-bold text-royal-900 mb-3">Talks &amp; Lectures</h4>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">Inspiring talks on Sikh history, philosophy, and contemporary issues. Recordings from camps, dewans, and special guest speakers.</p>
+          <a href="https://www.youtube.com/c/IIGSCalling" target="_blank" class="text-royal-600 hover:text-royal-700 font-semibold text-sm inline-flex items-center gap-1">Browse Talks <i data-lucide="external-link" class="w-4 h-4"></i></a>
         </div>
       </div>
 
-      <!-- Virtual Dewans Banner -->
-      <div data-aos="fade-up" class="bg-gradient-to-r from-bark-800 to-bark-900 rounded-2xl p-8 lg:p-12 text-white">
+      <div data-aos="fade-up" class="bg-gradient-to-r from-royal-800 to-royal-900 rounded-2xl p-8 lg:p-12 text-white">
         <div class="grid lg:grid-cols-2 gap-8 items-center">
           <div>
-            <div class="flex items-center gap-2 mb-4">
-              <span class="w-3 h-3 bg-red-500 rounded-full animate-pulse"></span>
-              <span class="text-red-400 text-sm font-semibold uppercase tracking-wider">Live Programs</span>
-            </div>
+            <div class="flex items-center gap-2 mb-4"><span class="w-3 h-3 bg-red-500 rounded-full animate-pulse"></span><span class="text-red-400 text-sm font-semibold uppercase tracking-wider">Live Programs</span></div>
             <h3 class="font-heading text-2xl lg:text-3xl font-bold mb-3">Virtual Global Dewans</h3>
-            <p class="text-wheat-300/70 mb-6">179+ programs since June 2020. Join Sikhs from around the world for kirtan, katha, and spiritual fellowship every 1st and 3rd Saturday.</p>
-            <a href="https://www.facebook.com/igscalling" target="_blank"
-               class="inline-flex items-center gap-2 px-6 py-3 bg-khanda-400 hover:bg-khanda-500 text-white font-semibold rounded-full transition-all">
-              <i data-lucide="video" class="w-5 h-5"></i> Join Live Dewan
-            </a>
+            <p class="text-slate-300/70 mb-6">179+ programs since June 2020. Join Sikhs from around the world for kirtan, katha, and spiritual fellowship every 1st and 3rd Saturday.</p>
+            <a href="https://www.facebook.com/igscalling" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-gold-400 hover:bg-gold-500 text-royal-900 font-semibold rounded-full transition-all"><i data-lucide="video" class="w-5 h-5"></i> Join Live Dewan</a>
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div class="bg-white/10 rounded-xl p-5 text-center backdrop-blur-sm">
-              <p class="text-khanda-300 text-xs uppercase tracking-wider mb-2">USA &amp; Canada (PST)</p>
-              <p class="text-white font-heading text-lg font-bold">6:30&ndash;8:00 PM</p>
-              <p class="text-wheat-300/50 text-xs mt-1">Saturday</p>
-            </div>
-            <div class="bg-white/10 rounded-xl p-5 text-center backdrop-blur-sm">
-              <p class="text-khanda-300 text-xs uppercase tracking-wider mb-2">India (IST)</p>
-              <p class="text-white font-heading text-lg font-bold">7:00&ndash;8:30 AM</p>
-              <p class="text-wheat-300/50 text-xs mt-1">Sunday</p>
-            </div>
-            <div class="bg-white/10 rounded-xl p-5 text-center backdrop-blur-sm">
-              <p class="text-khanda-300 text-xs uppercase tracking-wider mb-2">Australia (AEST)</p>
-              <p class="text-white font-heading text-lg font-bold">11:30 AM&ndash;1:00 PM</p>
-              <p class="text-wheat-300/50 text-xs mt-1">Sunday</p>
-            </div>
+            <div class="bg-white/10 rounded-xl p-5 text-center backdrop-blur-sm"><p class="text-gold-300 text-xs uppercase tracking-wider mb-2">USA &amp; Canada (PST)</p><p class="text-white font-heading text-lg font-bold">6:30&ndash;8:00 PM</p><p class="text-slate-400 text-xs mt-1">Saturday</p></div>
+            <div class="bg-white/10 rounded-xl p-5 text-center backdrop-blur-sm"><p class="text-gold-300 text-xs uppercase tracking-wider mb-2">India (IST)</p><p class="text-white font-heading text-lg font-bold">7:00&ndash;8:30 AM</p><p class="text-slate-400 text-xs mt-1">Sunday</p></div>
+            <div class="bg-white/10 rounded-xl p-5 text-center backdrop-blur-sm"><p class="text-gold-300 text-xs uppercase tracking-wider mb-2">Australia (AEST)</p><p class="text-white font-heading text-lg font-bold">11:30 AM&ndash;1:00 PM</p><p class="text-slate-400 text-xs mt-1">Sunday</p></div>
           </div>
         </div>
       </div>
@@ -862,114 +632,51 @@
   <!-- ============================================================
        SCHOLARSHIPS
        ============================================================ -->
-  <section id="scholarships" class="py-20 lg:py-28 bg-wheat-50">
+  <section id="scholarships" class="py-20 lg:py-28 bg-slate-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16" data-aos="fade-up">
-        <p class="text-khanda-500 font-semibold tracking-wider uppercase text-sm mb-2">Education</p>
-        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-bark-900">Scholarships</h2>
-        <div class="mt-4 w-20 h-1 bg-gradient-to-r from-khanda-400 to-khanda-600 mx-auto rounded-full"></div>
+        <p class="text-royal-600 font-semibold tracking-wider uppercase text-sm mb-2">Education</p>
+        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-royal-900">Scholarships</h2>
+        <div class="mt-4 w-20 h-1 bg-gradient-to-r from-gold-400 to-gold-600 mx-auto rounded-full"></div>
       </div>
 
       <div class="grid lg:grid-cols-2 gap-12 items-start">
-        <!-- Scholarship Image & Golf -->
         <div data-aos="fade-right">
-          <img src="https://dvncorestorageprod.blob.core.windows.net/files/OrganizationApplication/10102/Updates/IIGS_Scholarships_2024-25_20250128034733077.jpg"
-               alt="IIGS Scholarships 2024-25"
-               class="rounded-2xl shadow-xl w-full object-cover mb-8 cursor-pointer hover:shadow-2xl transition-shadow"
-               onclick="openLightbox(this.src)">
-
-          <!-- Golf Tournament Card -->
-          <div class="bg-white rounded-2xl p-6 shadow-lg border border-bark-100">
-            <div class="flex items-center gap-3 mb-4">
-              <div class="w-10 h-10 bg-green-50 rounded-lg flex items-center justify-center">
-                <i data-lucide="flag-triangle-right" class="w-5 h-5 text-green-600"></i>
-              </div>
-              <h4 class="font-heading text-lg font-bold text-bark-900">IIGS Golf Tournament</h4>
-            </div>
-            <p class="text-bark-600 text-sm leading-relaxed mb-4">Annual charity golf tournament supporting IIGS scholarships and youth programs. Join us on the greens for a great cause.</p>
-            <a href="https://www.iigsgolf.com" target="_blank"
-               class="text-khanda-500 hover:text-khanda-600 font-semibold text-sm inline-flex items-center gap-1">
-              Visit iigsgolf.com <i data-lucide="external-link" class="w-4 h-4"></i>
-            </a>
+          <img src="https://dvncorestorageprod.blob.core.windows.net/files/OrganizationApplication/10102/Updates/IIGS_Scholarships_2024-25_20250128034733077.jpg" alt="IIGS Scholarships 2024-25" class="rounded-2xl shadow-xl w-full object-cover mb-8 cursor-pointer hover:shadow-2xl transition-shadow" onclick="openLightbox(this.src)">
+          <div class="bg-white rounded-2xl p-6 shadow-lg border border-slate-100">
+            <div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 bg-green-50 rounded-lg flex items-center justify-center"><i data-lucide="flag-triangle-right" class="w-5 h-5 text-green-600"></i></div><h4 class="font-heading text-lg font-bold text-royal-900">IIGS Golf Tournament</h4></div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">Annual charity golf tournament supporting IIGS scholarships and youth programs.</p>
+            <a href="https://www.iigsgolf.com" target="_blank" class="text-royal-600 hover:text-royal-700 font-semibold text-sm inline-flex items-center gap-1">Visit iigsgolf.com <i data-lucide="external-link" class="w-4 h-4"></i></a>
           </div>
         </div>
 
-        <!-- Scholarship Details -->
         <div data-aos="fade-left">
-          <div class="bg-white rounded-2xl p-8 shadow-lg border border-bark-100 mb-8">
-            <h3 class="font-heading text-2xl font-bold text-bark-900 mb-4">Scholarship Program</h3>
-            <div class="space-y-4 text-bark-600 leading-relaxed">
-              <p>IIGS awards <strong class="text-bark-800">5 scholarships of $1,000 each</strong> annually to Sikh youth in the USA and Canada.</p>
-              <div class="bg-khanda-50 rounded-xl p-4">
-                <h5 class="font-semibold text-bark-800 mb-2">Eligibility</h5>
+          <div class="bg-white rounded-2xl p-8 shadow-lg border border-slate-100 mb-8">
+            <h3 class="font-heading text-2xl font-bold text-royal-900 mb-4">Scholarship Program</h3>
+            <div class="space-y-4 text-slate-600 leading-relaxed">
+              <p>IIGS awards <strong class="text-slate-800">5 scholarships of $1,000 each</strong> annually to Sikh youth in the USA and Canada.</p>
+              <div class="bg-royal-50 rounded-xl p-4">
+                <h5 class="font-semibold text-slate-800 mb-2">Eligibility</h5>
                 <ul class="space-y-1 text-sm">
-                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-khanda-500 shrink-0 mt-0.5"></i> Ages up to 22 (high school seniors &amp; college students)</li>
-                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-khanda-500 shrink-0 mt-0.5"></i> Residents of USA or Canada</li>
-                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-khanda-500 shrink-0 mt-0.5"></i> One scholarship considers sports achievements</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-royal-600 shrink-0 mt-0.5"></i> Ages up to 22 (high school seniors &amp; college students)</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-royal-600 shrink-0 mt-0.5"></i> Residents of USA or Canada</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-royal-600 shrink-0 mt-0.5"></i> One scholarship considers sports achievements</li>
                 </ul>
               </div>
             </div>
             <div class="mt-6 flex flex-wrap gap-3">
-              <a href="https://www.iigs.com/scholarship-program" target="_blank"
-                 class="px-6 py-2.5 bg-khanda-400 hover:bg-khanda-500 text-white font-semibold rounded-full text-sm transition-all">
-                Apply Now
-              </a>
-              <a href="https://www.iigs.com/past-winners" target="_blank"
-                 class="px-6 py-2.5 border-2 border-bark-200 hover:border-bark-300 text-bark-700 font-semibold rounded-full text-sm transition-all">
-                Past Winners
-              </a>
+              <a href="https://www.iigs.com/scholarship-program" target="_blank" class="px-6 py-2.5 bg-gold-400 hover:bg-gold-500 text-royal-900 font-semibold rounded-full text-sm transition-all">Apply Now</a>
+              <a href="https://www.iigs.com/past-winners" target="_blank" class="px-6 py-2.5 border-2 border-slate-200 hover:border-slate-300 text-slate-700 font-semibold rounded-full text-sm transition-all">Past Winners</a>
             </div>
           </div>
-
-          <!-- Past Winners -->
-          <div class="bg-white rounded-2xl p-8 shadow-lg border border-bark-100">
-            <h4 class="font-heading text-lg font-bold text-bark-900 mb-4">Past Winners (2021&ndash;22)</h4>
+          <div class="bg-white rounded-2xl p-8 shadow-lg border border-slate-100">
+            <h4 class="font-heading text-lg font-bold text-royal-900 mb-4">Past Winners (2021&ndash;22)</h4>
             <div class="space-y-3">
-              <div class="flex items-center gap-3">
-                <div class="w-8 h-8 bg-khanda-50 rounded-full flex items-center justify-center">
-                  <i data-lucide="award" class="w-4 h-4 text-khanda-500"></i>
-                </div>
-                <div>
-                  <p class="font-semibold text-bark-800 text-sm">Aagya Kaur</p>
-                  <p class="text-bark-400 text-xs">West Covina, CA</p>
-                </div>
-              </div>
-              <div class="flex items-center gap-3">
-                <div class="w-8 h-8 bg-khanda-50 rounded-full flex items-center justify-center">
-                  <i data-lucide="award" class="w-4 h-4 text-khanda-500"></i>
-                </div>
-                <div>
-                  <p class="font-semibold text-bark-800 text-sm">Amrita Priya Kaur</p>
-                  <p class="text-bark-400 text-xs">West Covina, CA</p>
-                </div>
-              </div>
-              <div class="flex items-center gap-3">
-                <div class="w-8 h-8 bg-khanda-50 rounded-full flex items-center justify-center">
-                  <i data-lucide="award" class="w-4 h-4 text-khanda-500"></i>
-                </div>
-                <div>
-                  <p class="font-semibold text-bark-800 text-sm">Amitoj Singh</p>
-                  <p class="text-bark-400 text-xs">Fontana, CA</p>
-                </div>
-              </div>
-              <div class="flex items-center gap-3">
-                <div class="w-8 h-8 bg-khanda-50 rounded-full flex items-center justify-center">
-                  <i data-lucide="award" class="w-4 h-4 text-khanda-500"></i>
-                </div>
-                <div>
-                  <p class="font-semibold text-bark-800 text-sm">Ekas Kaur</p>
-                  <p class="text-bark-400 text-xs">Winnipeg, Canada</p>
-                </div>
-              </div>
-              <div class="flex items-center gap-3">
-                <div class="w-8 h-8 bg-khanda-50 rounded-full flex items-center justify-center">
-                  <i data-lucide="award" class="w-4 h-4 text-khanda-500"></i>
-                </div>
-                <div>
-                  <p class="font-semibold text-bark-800 text-sm">Harlene Kaur</p>
-                  <p class="text-bark-400 text-xs">Cypress, TX</p>
-                </div>
-              </div>
+              <div class="flex items-center gap-3"><div class="w-8 h-8 bg-gold-50 rounded-full flex items-center justify-center"><i data-lucide="award" class="w-4 h-4 text-gold-500"></i></div><div><p class="font-semibold text-slate-800 text-sm">Aagya Kaur</p><p class="text-slate-400 text-xs">West Covina, CA</p></div></div>
+              <div class="flex items-center gap-3"><div class="w-8 h-8 bg-gold-50 rounded-full flex items-center justify-center"><i data-lucide="award" class="w-4 h-4 text-gold-500"></i></div><div><p class="font-semibold text-slate-800 text-sm">Amrita Priya Kaur</p><p class="text-slate-400 text-xs">West Covina, CA</p></div></div>
+              <div class="flex items-center gap-3"><div class="w-8 h-8 bg-gold-50 rounded-full flex items-center justify-center"><i data-lucide="award" class="w-4 h-4 text-gold-500"></i></div><div><p class="font-semibold text-slate-800 text-sm">Amitoj Singh</p><p class="text-slate-400 text-xs">Fontana, CA</p></div></div>
+              <div class="flex items-center gap-3"><div class="w-8 h-8 bg-gold-50 rounded-full flex items-center justify-center"><i data-lucide="award" class="w-4 h-4 text-gold-500"></i></div><div><p class="font-semibold text-slate-800 text-sm">Ekas Kaur</p><p class="text-slate-400 text-xs">Winnipeg, Canada</p></div></div>
+              <div class="flex items-center gap-3"><div class="w-8 h-8 bg-gold-50 rounded-full flex items-center justify-center"><i data-lucide="award" class="w-4 h-4 text-gold-500"></i></div><div><p class="font-semibold text-slate-800 text-sm">Harlene Kaur</p><p class="text-slate-400 text-xs">Cypress, TX</p></div></div>
             </div>
           </div>
         </div>
@@ -983,80 +690,27 @@
   <section id="media" class="py-20 lg:py-28 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16" data-aos="fade-up">
-        <p class="text-khanda-500 font-semibold tracking-wider uppercase text-sm mb-2">Watch &amp; Read</p>
-        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-bark-900">Media</h2>
-        <div class="mt-4 w-20 h-1 bg-gradient-to-r from-khanda-400 to-khanda-600 mx-auto rounded-full"></div>
+        <p class="text-royal-600 font-semibold tracking-wider uppercase text-sm mb-2">Watch &amp; Read</p>
+        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-royal-900">Media</h2>
+        <div class="mt-4 w-20 h-1 bg-gradient-to-r from-gold-400 to-gold-600 mx-auto rounded-full"></div>
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- YouTube Channel -->
-        <div data-aos="fade-up" data-aos-delay="0" class="bg-bark-50 rounded-2xl overflow-hidden shadow-lg border border-bark-100 hover:shadow-xl transition-shadow group">
-          <div class="h-44 bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center">
-            <div class="text-center">
-              <i data-lucide="youtube" class="w-16 h-16 text-white mx-auto mb-2 group-hover:scale-110 transition-transform"></i>
-              <p class="text-white/80 text-sm">IIGS Calling</p>
-            </div>
-          </div>
-          <div class="p-5">
-            <h4 class="font-heading text-lg font-bold text-bark-900 mb-2">YouTube Channel</h4>
-            <p class="text-bark-600 text-sm mb-4">Watch kirtan, camp highlights, dewans, and more on our official YouTube channel.</p>
-            <a href="https://www.youtube.com/c/IIGSCalling" target="_blank"
-               class="text-red-500 hover:text-red-600 font-semibold text-sm inline-flex items-center gap-1">
-              Subscribe <i data-lucide="external-link" class="w-4 h-4"></i>
-            </a>
-          </div>
+        <div data-aos="fade-up" data-aos-delay="0" class="bg-slate-50 rounded-2xl overflow-hidden shadow-lg border border-slate-100 hover:shadow-xl transition-shadow group">
+          <div class="h-44 bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center"><div class="text-center"><i data-lucide="youtube" class="w-16 h-16 text-white mx-auto mb-2 group-hover:scale-110 transition-transform"></i><p class="text-white/80 text-sm">IIGS Calling</p></div></div>
+          <div class="p-5"><h4 class="font-heading text-lg font-bold text-royal-900 mb-2">YouTube Channel</h4><p class="text-slate-600 text-sm mb-4">Watch kirtan, camp highlights, dewans, and more.</p><a href="https://www.youtube.com/c/IIGSCalling" target="_blank" class="text-red-500 hover:text-red-600 font-semibold text-sm inline-flex items-center gap-1">Subscribe <i data-lucide="external-link" class="w-4 h-4"></i></a></div>
         </div>
-
-        <!-- Chaali Mukte Film -->
-        <div data-aos="fade-up" data-aos-delay="100" class="bg-bark-50 rounded-2xl overflow-hidden shadow-lg border border-bark-100 hover:shadow-xl transition-shadow group">
-          <div class="h-44 overflow-hidden">
-            <img src="https://dvncorestorageprod.blob.core.windows.net/files/OrganizationApplication/10102/Image/304x540/Chaali_Mukte.1.jpg"
-                 alt="Chaali Mukte Film" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-          </div>
-          <div class="p-5">
-            <h4 class="font-heading text-lg font-bold text-bark-900 mb-2">Chaali Mukte</h4>
-            <p class="text-bark-600 text-sm mb-4">The story of the 40 Liberated Ones &mdash; an IIGS film production celebrating Sikh courage and sacrifice.</p>
-            <a href="https://www.youtube.com/c/IIGSCalling" target="_blank"
-               class="text-khanda-500 hover:text-khanda-600 font-semibold text-sm inline-flex items-center gap-1">
-              Watch Film <i data-lucide="external-link" class="w-4 h-4"></i>
-            </a>
-          </div>
+        <div data-aos="fade-up" data-aos-delay="100" class="bg-slate-50 rounded-2xl overflow-hidden shadow-lg border border-slate-100 hover:shadow-xl transition-shadow group">
+          <div class="h-44 overflow-hidden"><img src="https://dvncorestorageprod.blob.core.windows.net/files/OrganizationApplication/10102/Image/304x540/Chaali_Mukte.1.jpg" alt="Chaali Mukte Film" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></div>
+          <div class="p-5"><h4 class="font-heading text-lg font-bold text-royal-900 mb-2">Chaali Mukte</h4><p class="text-slate-600 text-sm mb-4">The story of the 40 Liberated Ones &mdash; an IIGS film production.</p><a href="https://www.youtube.com/c/IIGSCalling" target="_blank" class="text-royal-600 hover:text-royal-700 font-semibold text-sm inline-flex items-center gap-1">Watch Film <i data-lucide="external-link" class="w-4 h-4"></i></a></div>
         </div>
-
-        <!-- Short Films -->
-        <div data-aos="fade-up" data-aos-delay="200" class="bg-bark-50 rounded-2xl overflow-hidden shadow-lg border border-bark-100 hover:shadow-xl transition-shadow group">
-          <div class="h-44 bg-gradient-to-br from-bark-700 to-bark-900 flex items-center justify-center">
-            <div class="text-center">
-              <i data-lucide="clapperboard" class="w-16 h-16 text-khanda-300 mx-auto mb-2 group-hover:scale-110 transition-transform"></i>
-              <p class="text-wheat-300/80 text-sm">Camp Documentaries</p>
-            </div>
-          </div>
-          <div class="p-5">
-            <h4 class="font-heading text-lg font-bold text-bark-900 mb-2">Short Films</h4>
-            <p class="text-bark-600 text-sm mb-4">Camp documentaries, interviews with campers and sewadars, and highlights from IIGS events worldwide.</p>
-            <a href="https://www.youtube.com/c/IIGSCalling" target="_blank"
-               class="text-khanda-500 hover:text-khanda-600 font-semibold text-sm inline-flex items-center gap-1">
-              Watch Now <i data-lucide="external-link" class="w-4 h-4"></i>
-            </a>
-          </div>
+        <div data-aos="fade-up" data-aos-delay="200" class="bg-slate-50 rounded-2xl overflow-hidden shadow-lg border border-slate-100 hover:shadow-xl transition-shadow group">
+          <div class="h-44 bg-gradient-to-br from-royal-700 to-royal-900 flex items-center justify-center"><div class="text-center"><i data-lucide="clapperboard" class="w-16 h-16 text-gold-300 mx-auto mb-2 group-hover:scale-110 transition-transform"></i><p class="text-slate-300/80 text-sm">Camp Documentaries</p></div></div>
+          <div class="p-5"><h4 class="font-heading text-lg font-bold text-royal-900 mb-2">Short Films</h4><p class="text-slate-600 text-sm mb-4">Camp documentaries, interviews, and highlights from IIGS events.</p><a href="https://www.youtube.com/c/IIGSCalling" target="_blank" class="text-royal-600 hover:text-royal-700 font-semibold text-sm inline-flex items-center gap-1">Watch Now <i data-lucide="external-link" class="w-4 h-4"></i></a></div>
         </div>
-
-        <!-- Publications -->
-        <div data-aos="fade-up" data-aos-delay="300" class="bg-bark-50 rounded-2xl overflow-hidden shadow-lg border border-bark-100 hover:shadow-xl transition-shadow group">
-          <div class="h-44 bg-gradient-to-br from-khanda-600 to-khanda-800 flex items-center justify-center">
-            <div class="text-center">
-              <i data-lucide="book-text" class="w-16 h-16 text-khanda-200 mx-auto mb-2 group-hover:scale-110 transition-transform"></i>
-              <p class="text-khanda-200/80 text-sm">The Sikh Portrait &amp; More</p>
-            </div>
-          </div>
-          <div class="p-5">
-            <h4 class="font-heading text-lg font-bold text-bark-900 mb-2">Publications</h4>
-            <p class="text-bark-600 text-sm mb-4">The Sikh Portrait magazine, camp newsletters, Gurmat study materials, and more from IIGS archives.</p>
-            <a href="#portraits"
-               class="text-khanda-500 hover:text-khanda-600 font-semibold text-sm inline-flex items-center gap-1">
-              View Gallery <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </a>
-          </div>
+        <div data-aos="fade-up" data-aos-delay="300" class="bg-slate-50 rounded-2xl overflow-hidden shadow-lg border border-slate-100 hover:shadow-xl transition-shadow group">
+          <div class="h-44 bg-gradient-to-br from-gold-500 to-gold-700 flex items-center justify-center"><div class="text-center"><i data-lucide="book-text" class="w-16 h-16 text-gold-100 mx-auto mb-2 group-hover:scale-110 transition-transform"></i><p class="text-gold-100/80 text-sm">The Sikh Portrait &amp; More</p></div></div>
+          <div class="p-5"><h4 class="font-heading text-lg font-bold text-royal-900 mb-2">Publications</h4><p class="text-slate-600 text-sm mb-4">Magazines, camp newsletters, Gurmat study materials, and more.</p><a href="#portraits" class="text-royal-600 hover:text-royal-700 font-semibold text-sm inline-flex items-center gap-1">View Gallery <i data-lucide="arrow-right" class="w-4 h-4"></i></a></div>
         </div>
       </div>
     </div>
@@ -1065,42 +719,26 @@
   <!-- ============================================================
        DONATE
        ============================================================ -->
-  <section id="donate" class="py-20 lg:py-28 bg-gradient-to-br from-bark-900 via-bark-800 to-khanda-900 text-white">
+  <section id="donate" class="py-20 lg:py-28 bg-gradient-to-br from-royal-900 via-royal-800 to-slate-900 text-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16" data-aos="fade-up">
-        <p class="text-khanda-300 font-semibold tracking-wider uppercase text-sm mb-2">Support</p>
+        <p class="text-gold-300 font-semibold tracking-wider uppercase text-sm mb-2">Support</p>
         <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white">Support IIGS</h2>
-        <p class="text-wheat-300/70 mt-3 max-w-xl mx-auto">Your tax-deductible donation supports youth camps, scholarships, kirtan dewans, and community programs.</p>
-        <p class="text-wheat-300/50 text-sm mt-2">501(c)(3) Nonprofit &bull; EIN: 33-0200044</p>
-        <div class="mt-4 w-20 h-1 bg-gradient-to-r from-khanda-400 to-khanda-300 mx-auto rounded-full"></div>
+        <p class="text-slate-300/70 mt-3 max-w-xl mx-auto">Your tax-deductible donation supports youth camps, scholarships, kirtan dewans, and community programs.</p>
+        <p class="text-slate-400 text-sm mt-2">501(c)(3) Nonprofit &bull; EIN: 33-0200044</p>
+        <div class="mt-4 w-20 h-1 bg-gradient-to-r from-gold-400 to-gold-300 mx-auto rounded-full"></div>
       </div>
 
-      <!-- Donation Tiers -->
       <div data-aos="fade-up" class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-        <div class="donate-tier" data-amount="25">
-          <p class="text-2xl font-bold text-khanda-300">$25</p>
-          <p class="text-wheat-300/60 text-xs mt-1">Sponsor a camper's supplies</p>
-        </div>
-        <div class="donate-tier active" data-amount="51">
-          <p class="text-2xl font-bold text-khanda-300">$51</p>
-          <p class="text-wheat-300/60 text-xs mt-1">Feed 100 at langar</p>
-        </div>
-        <div class="donate-tier" data-amount="101">
-          <p class="text-2xl font-bold text-khanda-300">$101</p>
-          <p class="text-wheat-300/60 text-xs mt-1">Sponsor a scholarship</p>
-        </div>
-        <div class="donate-tier" data-amount="251">
-          <p class="text-2xl font-bold text-khanda-300">$251</p>
-          <p class="text-wheat-300/60 text-xs mt-1">Sustain a program</p>
-        </div>
+        <div class="donate-tier" data-amount="25"><p class="text-2xl font-bold text-gold-300">$25</p><p class="text-slate-300/60 text-xs mt-1">Sponsor a camper's supplies</p></div>
+        <div class="donate-tier active" data-amount="51"><p class="text-2xl font-bold text-gold-300">$51</p><p class="text-slate-300/60 text-xs mt-1">Feed 100 at langar</p></div>
+        <div class="donate-tier" data-amount="101"><p class="text-2xl font-bold text-gold-300">$101</p><p class="text-slate-300/60 text-xs mt-1">Sponsor a scholarship</p></div>
+        <div class="donate-tier" data-amount="251"><p class="text-2xl font-bold text-gold-300">$251</p><p class="text-slate-300/60 text-xs mt-1">Sustain a program</p></div>
       </div>
 
       <div data-aos="fade-up" class="text-center">
-        <a href="https://www.iigs.com/donate-now" target="_blank"
-           class="inline-flex items-center gap-2 px-10 py-4 bg-khanda-400 hover:bg-khanda-500 text-white font-bold rounded-full text-lg transition-all hover:shadow-xl hover:shadow-khanda-400/30 hover:-translate-y-0.5">
-          <i data-lucide="heart" class="w-5 h-5"></i> Donate Now
-        </a>
-        <p class="text-wheat-300/40 text-sm mt-4">Secure donation via iigs.com. All donations are tax-deductible.</p>
+        <a href="https://www.iigs.com/donate-now" target="_blank" class="inline-flex items-center gap-2 px-10 py-4 bg-gold-400 hover:bg-gold-500 text-royal-900 font-bold rounded-full text-lg transition-all hover:shadow-xl hover:shadow-gold-400/30 hover:-translate-y-0.5"><i data-lucide="heart" class="w-5 h-5"></i> Donate Now</a>
+        <p class="text-slate-400 text-sm mt-4">Secure donation via iigs.com. All donations are tax-deductible.</p>
       </div>
     </div>
   </section>
@@ -1108,29 +746,21 @@
   <!-- ============================================================
        CONTACT
        ============================================================ -->
-  <section id="contact" class="py-20 lg:py-28 bg-wheat-50">
+  <section id="contact" class="py-20 lg:py-28 bg-slate-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16" data-aos="fade-up">
-        <p class="text-khanda-500 font-semibold tracking-wider uppercase text-sm mb-2">Reach Out</p>
-        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-bark-900">Contact Us</h2>
-        <div class="mt-4 w-20 h-1 bg-gradient-to-r from-khanda-400 to-khanda-600 mx-auto rounded-full"></div>
+        <p class="text-royal-600 font-semibold tracking-wider uppercase text-sm mb-2">Reach Out</p>
+        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-royal-900">Contact Us</h2>
+        <div class="mt-4 w-20 h-1 bg-gradient-to-r from-gold-400 to-gold-600 mx-auto rounded-full"></div>
       </div>
 
       <div class="grid lg:grid-cols-2 gap-12">
-        <!-- Contact Form -->
         <div data-aos="fade-right">
-          <form id="contact-form" class="bg-white rounded-2xl p-8 shadow-lg border border-bark-100">
+          <form id="contact-form" class="bg-white rounded-2xl p-8 shadow-lg border border-slate-100">
             <div class="space-y-5">
-              <div>
-                <label for="name" class="block text-sm font-semibold text-bark-700 mb-1.5">Full Name</label>
-                <input type="text" id="name" name="name" required placeholder="Your full name" class="form-input">
-              </div>
-              <div>
-                <label for="email" class="block text-sm font-semibold text-bark-700 mb-1.5">Email Address</label>
-                <input type="email" id="email" name="email" required placeholder="you@example.com" class="form-input">
-              </div>
-              <div>
-                <label for="subject" class="block text-sm font-semibold text-bark-700 mb-1.5">Subject</label>
+              <div><label for="name" class="block text-sm font-semibold text-slate-700 mb-1.5">Full Name</label><input type="text" id="name" name="name" required placeholder="Your full name" class="form-input"></div>
+              <div><label for="email" class="block text-sm font-semibold text-slate-700 mb-1.5">Email Address</label><input type="email" id="email" name="email" required placeholder="you@example.com" class="form-input"></div>
+              <div><label for="subject" class="block text-sm font-semibold text-slate-700 mb-1.5">Subject</label>
                 <select id="subject" name="subject" required class="form-input">
                   <option value="" disabled selected>Select a subject</option>
                   <option value="Camp Registration">Camp Registration</option>
@@ -1141,63 +771,29 @@
                   <option value="General Inquiry">General Inquiry</option>
                 </select>
               </div>
-              <div>
-                <label for="message" class="block text-sm font-semibold text-bark-700 mb-1.5">Message</label>
-                <textarea id="message" name="message" required rows="5" placeholder="How can we help you?" class="form-input resize-none"></textarea>
-              </div>
-              <button type="submit"
-                      class="w-full py-3 bg-khanda-400 hover:bg-khanda-500 text-white font-semibold rounded-xl transition-all hover:shadow-lg flex items-center justify-center gap-2">
-                <i data-lucide="send" class="w-5 h-5"></i> Send Message
-              </button>
+              <div><label for="message" class="block text-sm font-semibold text-slate-700 mb-1.5">Message</label><textarea id="message" name="message" required rows="5" placeholder="How can we help you?" class="form-input resize-none"></textarea></div>
+              <button type="submit" class="w-full py-3 bg-royal-600 hover:bg-royal-700 text-white font-semibold rounded-xl transition-all hover:shadow-lg flex items-center justify-center gap-2"><i data-lucide="send" class="w-5 h-5"></i> Send Message</button>
             </div>
           </form>
         </div>
 
-        <!-- Contact Info -->
         <div data-aos="fade-left" class="space-y-8">
-          <div class="bg-white rounded-2xl p-8 shadow-lg border border-bark-100">
-            <h3 class="font-heading text-xl font-bold text-bark-900 mb-6">Get in Touch</h3>
+          <div class="bg-white rounded-2xl p-8 shadow-lg border border-slate-100">
+            <h3 class="font-heading text-xl font-bold text-royal-900 mb-6">Get in Touch</h3>
             <div class="space-y-5">
-              <div class="flex gap-4">
-                <div class="w-10 h-10 bg-khanda-50 rounded-lg flex items-center justify-center shrink-0">
-                  <i data-lucide="map-pin" class="w-5 h-5 text-khanda-500"></i>
-                </div>
-                <div>
-                  <p class="font-semibold text-bark-800">Office Address</p>
-                  <p class="text-bark-500 text-sm">16702 Tourmaline Street<br>Chino Hills, CA 91709</p>
-                </div>
-              </div>
-              <div class="flex gap-4">
-                <div class="w-10 h-10 bg-khanda-50 rounded-lg flex items-center justify-center shrink-0">
-                  <i data-lucide="mail" class="w-5 h-5 text-khanda-500"></i>
-                </div>
-                <div>
-                  <p class="font-semibold text-bark-800">Email</p>
-                  <a href="mailto:gurpreet.kaur@iigs.com" class="text-khanda-500 hover:text-khanda-600 text-sm">gurpreet.kaur@iigs.com</a>
-                </div>
-              </div>
+              <div class="flex gap-4"><div class="w-10 h-10 bg-royal-50 rounded-lg flex items-center justify-center shrink-0"><i data-lucide="map-pin" class="w-5 h-5 text-royal-600"></i></div><div><p class="font-semibold text-slate-800">Office Address</p><p class="text-slate-500 text-sm">16702 Tourmaline Street<br>Chino Hills, CA 91709</p></div></div>
+              <div class="flex gap-4"><div class="w-10 h-10 bg-royal-50 rounded-lg flex items-center justify-center shrink-0"><i data-lucide="mail" class="w-5 h-5 text-royal-600"></i></div><div><p class="font-semibold text-slate-800">Email</p><a href="mailto:gurpreet.kaur@iigs.com" class="text-royal-600 hover:text-royal-700 text-sm">gurpreet.kaur@iigs.com</a></div></div>
             </div>
           </div>
-
-          <!-- Social Links -->
-          <div class="bg-white rounded-2xl p-8 shadow-lg border border-bark-100">
-            <h3 class="font-heading text-xl font-bold text-bark-900 mb-6">Follow Us</h3>
+          <div class="bg-white rounded-2xl p-8 shadow-lg border border-slate-100">
+            <h3 class="font-heading text-xl font-bold text-royal-900 mb-6">Follow Us</h3>
             <div class="flex gap-4">
-              <a href="https://www.facebook.com/igscalling" target="_blank"
-                 class="w-12 h-12 bg-blue-50 hover:bg-blue-100 rounded-xl flex items-center justify-center transition-colors" title="Facebook">
-                <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-              </a>
-              <a href="https://www.youtube.com/c/IIGSCalling" target="_blank"
-                 class="w-12 h-12 bg-red-50 hover:bg-red-100 rounded-xl flex items-center justify-center transition-colors" title="YouTube">
-                <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-              </a>
+              <a href="https://www.facebook.com/igscalling" target="_blank" class="w-12 h-12 bg-blue-50 hover:bg-blue-100 rounded-xl flex items-center justify-center transition-colors" title="Facebook"><svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+              <a href="https://www.youtube.com/c/IIGSCalling" target="_blank" class="w-12 h-12 bg-red-50 hover:bg-red-100 rounded-xl flex items-center justify-center transition-colors" title="YouTube"><svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
             </div>
           </div>
-
-          <!-- Map -->
-          <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-bark-100">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.3!2d-117.726!3d33.984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDU5JzAyLjQiTiAxMTfCsDQzJzMzLjYiVw!5e0!3m2!1sen!2sus!4v1700000000000"
-                    width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" class="w-full"></iframe>
+          <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.3!2d-117.726!3d33.984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDU5JzAyLjQiTiAxMTfCsDQzJzMzLjYiVw!5e0!3m2!1sen!2sus!4v1700000000000" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" class="w-full"></iframe>
           </div>
         </div>
       </div>
@@ -1207,17 +803,15 @@
   <!-- ============================================================
        NEWSLETTER CTA
        ============================================================ -->
-  <section class="py-16 bg-gradient-to-r from-khanda-500 to-khanda-600">
+  <section class="py-16 bg-gradient-to-r from-royal-600 to-royal-700">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <div data-aos="fade-up">
         <i data-lucide="mail" class="w-10 h-10 text-white/80 mx-auto mb-4"></i>
         <h2 class="font-heading text-2xl sm:text-3xl font-bold text-white mb-3">Stay Connected with IIGS</h2>
         <p class="text-white/80 mb-8 max-w-lg mx-auto">Get updates on camps, dewans, Darbar-E-Khalsa, and more. Join the IIGS community newsletter.</p>
         <form id="newsletter-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-          <input type="email" required placeholder="Enter your email" class="flex-1 px-5 py-3 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 text-white placeholder-white/60 outline-none focus:border-white/60 focus:bg-white/25 transition-all">
-          <button type="submit" class="px-8 py-3 bg-white text-khanda-600 font-bold rounded-full hover:bg-wheat-50 transition-all hover:shadow-lg shrink-0">
-            Subscribe
-          </button>
+          <input type="email" required placeholder="Enter your email" class="flex-1 px-5 py-3 rounded-full bg-white/15 backdrop-blur-sm border border-white/25 text-white placeholder-white/60 outline-none focus:border-white/50 focus:bg-white/20 transition-all">
+          <button type="submit" class="px-8 py-3 bg-gold-400 text-royal-900 font-bold rounded-full hover:bg-gold-300 transition-all hover:shadow-lg shrink-0">Subscribe</button>
         </form>
       </div>
     </div>
@@ -1226,82 +820,54 @@
   <!-- ============================================================
        FOOTER
        ============================================================ -->
-  <footer class="bg-bark-900 text-white pt-16 pb-8">
+  <footer class="bg-royal-900 text-white pt-16 pb-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-        <!-- Brand -->
         <div>
-          <div class="flex items-center gap-3 mb-4">
-            <img src="https://dvncorestorageprod.blob.core.windows.net/files/ProjectApplication/100289/UserImage/IIGS_logo%20%281%29.png"
-                 alt="IIGS" class="h-12 logo-glow">
-            <span class="font-heading font-bold text-lg">IIGS</span>
-          </div>
-          <p class="text-wheat-300/60 text-sm leading-relaxed mb-4">
-            Institute of International Gurmat Studies. Inspiring Sikh youth worldwide since 1955.
-          </p>
-          <p class="text-wheat-300/40 text-xs">
-            501(c)(3) Nonprofit<br>
-            EIN: 33-0200044
-          </p>
+          <div class="flex items-center gap-3 mb-4"><img src="https://dvncorestorageprod.blob.core.windows.net/files/ProjectApplication/100289/UserImage/IIGS_logo%20%281%29.png" alt="IIGS" class="h-12 logo-glow"><span class="font-heading font-bold text-lg">IIGS</span></div>
+          <p class="text-slate-300/60 text-sm leading-relaxed mb-4">Institute of International Gurmat Studies. Inspiring Sikh youth worldwide since 1955.</p>
+          <p class="text-slate-400 text-xs">501(c)(3) Nonprofit<br>EIN: 33-0200044</p>
         </div>
-
-        <!-- Quick Links -->
         <div>
           <h4 class="font-semibold text-white mb-4">Quick Links</h4>
           <ul class="space-y-2 text-sm">
-            <li><a href="#about" class="text-wheat-300/60 hover:text-white transition-colors">About</a></li>
-            <li><a href="#camps" class="text-wheat-300/60 hover:text-white transition-colors">Youth Camps</a></li>
-            <li><a href="#dek" class="text-wheat-300/60 hover:text-white transition-colors">Darbar-E-Khalsa</a></li>
-            <li><a href="#scholarships" class="text-wheat-300/60 hover:text-white transition-colors">Scholarships</a></li>
-            <li><a href="#kirtan" class="text-wheat-300/60 hover:text-white transition-colors">Kirtan Library</a></li>
-            <li><a href="https://www.iigs.com/donate-now" target="_blank" class="text-wheat-300/60 hover:text-white transition-colors">Donate</a></li>
+            <li><a href="#about" class="text-slate-300/60 hover:text-white transition-colors">About</a></li>
+            <li><a href="#camps" class="text-slate-300/60 hover:text-white transition-colors">Youth Camps</a></li>
+            <li><a href="#dek" class="text-slate-300/60 hover:text-white transition-colors">Darbar-E-Khalsa</a></li>
+            <li><a href="#stories" class="text-slate-300/60 hover:text-white transition-colors">Stories</a></li>
+            <li><a href="#scholarships" class="text-slate-300/60 hover:text-white transition-colors">Scholarships</a></li>
+            <li><a href="#kirtan" class="text-slate-300/60 hover:text-white transition-colors">Kirtan Library</a></li>
+            <li><a href="https://www.iigs.com/donate-now" target="_blank" class="text-slate-300/60 hover:text-white transition-colors">Donate</a></li>
           </ul>
         </div>
-
-        <!-- Programs -->
         <div>
           <h4 class="font-semibold text-white mb-4">Programs</h4>
           <ul class="space-y-2 text-sm">
-            <li><a href="https://www.iigs.com/registration-form" target="_blank" class="text-wheat-300/60 hover:text-white transition-colors">Camp Registration</a></li>
-            <li><a href="https://www.iigs.com/scholarship-program" target="_blank" class="text-wheat-300/60 hover:text-white transition-colors">Scholarship Program</a></li>
-            <li><a href="https://www.iigs.com/past-winners" target="_blank" class="text-wheat-300/60 hover:text-white transition-colors">Past Winners</a></li>
-            <li><a href="https://www.iigsgolf.com" target="_blank" class="text-wheat-300/60 hover:text-white transition-colors">Golf Tournament</a></li>
-            <li><a href="#learning" class="text-wheat-300/60 hover:text-white transition-colors">Virtual Dewans</a></li>
-            <li><a href="#portraits" class="text-wheat-300/60 hover:text-white transition-colors">The Sikh Portrait</a></li>
+            <li><a href="https://www.iigs.com/registration-form" target="_blank" class="text-slate-300/60 hover:text-white transition-colors">Camp Registration</a></li>
+            <li><a href="https://www.iigs.com/scholarship-program" target="_blank" class="text-slate-300/60 hover:text-white transition-colors">Scholarship Program</a></li>
+            <li><a href="https://www.iigs.com/past-winners" target="_blank" class="text-slate-300/60 hover:text-white transition-colors">Past Winners</a></li>
+            <li><a href="https://www.iigsgolf.com" target="_blank" class="text-slate-300/60 hover:text-white transition-colors">Golf Tournament</a></li>
+            <li><a href="#learning" class="text-slate-300/60 hover:text-white transition-colors">Virtual Dewans</a></li>
+            <li><a href="#portraits" class="text-slate-300/60 hover:text-white transition-colors">The Sikh Portrait</a></li>
           </ul>
         </div>
-
-        <!-- Contact -->
         <div>
           <h4 class="font-semibold text-white mb-4">Contact</h4>
           <ul class="space-y-3 text-sm">
-            <li class="flex items-start gap-2">
-              <i data-lucide="map-pin" class="w-4 h-4 text-khanda-400 shrink-0 mt-0.5"></i>
-              <span class="text-wheat-300/60">16702 Tourmaline Street<br>Chino Hills, CA 91709</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <i data-lucide="mail" class="w-4 h-4 text-khanda-400 shrink-0"></i>
-              <a href="mailto:gurpreet.kaur@iigs.com" class="text-wheat-300/60 hover:text-white transition-colors">gurpreet.kaur@iigs.com</a>
-            </li>
+            <li class="flex items-start gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-gold-400 shrink-0 mt-0.5"></i><span class="text-slate-300/60">16702 Tourmaline Street<br>Chino Hills, CA 91709</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4 text-gold-400 shrink-0"></i><a href="mailto:gurpreet.kaur@iigs.com" class="text-slate-300/60 hover:text-white transition-colors">gurpreet.kaur@iigs.com</a></li>
           </ul>
           <div class="flex gap-3 mt-5">
-            <a href="https://www.facebook.com/igscalling" target="_blank"
-               class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-colors" title="Facebook">
-              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-            </a>
-            <a href="https://www.youtube.com/c/IIGSCalling" target="_blank"
-               class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-colors" title="YouTube">
-              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-            </a>
+            <a href="https://www.facebook.com/igscalling" target="_blank" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-colors" title="Facebook"><svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="https://www.youtube.com/c/IIGSCalling" target="_blank" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-colors" title="YouTube"><svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
           </div>
         </div>
       </div>
 
-      <!-- Divider -->
       <div class="border-t border-white/10 pt-8">
         <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p class="text-wheat-300/40 text-sm">&copy; 2026 Institute of International Gurmat Studies (IIGS). All rights reserved.</p>
-          <p class="text-wheat-300/30 text-xs">Made with love for the Khalsa Panth</p>
+          <p class="text-slate-400 text-sm">&copy; 2026 Institute of International Gurmat Studies (IIGS). All rights reserved.</p>
+          <p class="text-slate-500 text-xs">Made with love for the Khalsa Panth</p>
         </div>
       </div>
     </div>
@@ -1311,11 +877,13 @@
        BACK TO TOP
        ============================================================ -->
   <button id="back-to-top"
-          class="fixed bottom-6 right-6 z-50 w-12 h-12 bg-khanda-400 hover:bg-khanda-500 text-white rounded-full shadow-lg flex items-center justify-center transition-all opacity-0 translate-y-4 pointer-events-none"
+          class="fixed bottom-6 right-6 z-50 w-12 h-12 bg-royal-600 hover:bg-royal-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all opacity-0 translate-y-4 pointer-events-none"
           aria-label="Back to top">
     <i data-lucide="chevron-up" class="w-6 h-6"></i>
   </button>
 
+  <!-- Stories Data -->
+  <script src="js/stories.js"></script>
   <!-- Main JS -->
   <script src="js/main.js"></script>
 </body>
