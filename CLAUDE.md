@@ -3,20 +3,13 @@
 ## Project
 IIGS — IIGS project
 
-Project directory: `C:/Users/G Singh/Desktop/Claude Ai Projects/IIGS`
+Project directory: `/home/archon/projects/IIGS`
 
 ---
 
-## Message Routing
+## ARCHON Integration
 
-Messages from the ARCHON dashboard arrive prefixed: `[RELAY:IIGS] your message`
-Strip the prefix and respond normally — Relay handles routing back.
-
----
-
-## Inter-Agent Communication
-
-To send a message to another agent: POST to `http://localhost:57821/agent/message`
-```json
-{"from_agent": "claude", "to_agent": "sahiba", "message_type": "info", "content": "..."}
-```
+This project is managed via ARCHON 2.0 — a cloud-hosted AI assistant platform.
+- Web app: https://archonai.pages.dev
+- Agent runs on Surface Pro 6 (Linux), executes commands via Supabase
+- Sessions can be started/stopped from the web app or terminal
